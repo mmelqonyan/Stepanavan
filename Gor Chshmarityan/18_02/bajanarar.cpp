@@ -15,6 +15,7 @@ int nod(){
 	cin>>arr[1];
 	cout<<"Enter the third number: ";
 	cin>>arr[2];
+
 	
 	int temp;
 	temp=arr[0];
