@@ -34,7 +34,7 @@ int nod(){
 		{
 
 			cout<<"Bajanarar: "<<i<<endl;
-			return i;
+			
 		}
 	}
 }
