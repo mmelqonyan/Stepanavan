@@ -8,31 +8,33 @@ int main()
 }
 
 int nod(){
-	int num1, num2, num3, temp=0;
+	int arr[3];
 	cout<<"Enter the first number: ";
-	cin>>num1;
+	cin>>arr[0];
 	cout<<"Enter the second number: ";
-	cin>>num2;
+	cin>>arr[1];
 	cout<<"Enter the third number: ";
-	cin>>num3;
+	cin>>arr[2];
 
-	temp=num1;
-	if(num1>num2)
+	
+	int temp;
+	temp=arr[0];
+	if(arr[0]>arr[1])
 	{
-		temp=num2;
+		temp=arr[1];
 	}
-	if(num3<temp)
+	if(arr[2]<temp)
 	{
-		temp=num3;
+		temp=arr[2];
 	}
 
 	for(int i=temp; i>0; i--) {
 
-		if(num1 % i == 0 && num2 % i == 0 && num3 % i == 0)
+		if(arr[0] % i == 0 && arr[1] % i == 0 && arr[2] % i == 0)
 		{
 
 			cout<<"Bajanarar: "<<i<<endl;
-			return 0;
+			return i;
 		}
 	}
 }
