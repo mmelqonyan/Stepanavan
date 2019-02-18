@@ -25,7 +25,7 @@ int nod(){
 	}
 	if(arr[2]<temp)
 	{
-		temp=arr[1];
+		temp=arr[2];
 	}
 
 	for(int i=temp; i>0; i--) {
