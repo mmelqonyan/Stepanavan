@@ -1,22 +1,5 @@
 #include <iostream>
 #include <stdio.h>
-using namespace std;
-
-int main (){
-
-int num1, num2, num3;
-int div=2;
-int k1=0,k2=0,k3=0;
-cout<< "Enter Number1: ";
-cin>>num1;
-cout<<endl<< "Enter Number2: ";
-cin>>num2;
-cout<<endl<< "Enter Number3: ";
-cin>>num3;
-int n=(num1+num2+num3)/3;
-int divisor=1; 
-#include <iostream>
-#include <stdio.h>
 #include <vector>
 using namespace std;
 
@@ -96,3 +79,5 @@ vector <int> Div3(num3/2);
         }
         cout<<endl<<"DIVISOR= "<<divisor;
 }
+
+
