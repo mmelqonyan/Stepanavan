@@ -30,7 +30,7 @@ int main()
    cin>>num;
    array3 = tesq(num);
    
-    cout<<endl;
+    
    array4 = baj_3(baj_3(array,array2),array3);
 
    for (int i = 0; i < array4.size(); ++i)
@@ -40,7 +40,7 @@ int main()
    }
     
 
-   cout<<endl<<"Բազմապատկած - " <<tmp<<endl;
+   cout<<"Բազմապատկած - " <<tmp<<endl;
 return 0;
 }
 
@@ -51,21 +51,24 @@ vector<int> baj_3 (vector<int>arr,vector<int>arr2)
     int count = 0;
     int arr_sz = arr.size();
     int arr_sz2 = arr2.size();
-    
+ 
 
-   for(int i = 0; i < arr_sz;++i)
-    { 
-        for(int j = count;j < arr_sz2;++j)
-        { 
-            if (arr[i] == arr2[j])
-            {
-                tmp.push_back(arr[i]);
-                ++count;
-                ++i;
-            } 
-           
+   for(int i=0, j=0; i < arr_sz && j < arr_sz2; )
+   {
+        if(arr[i] == arr2[j])
+        {
+            tmp.push_back(arr[i]);
+            i++;
+            j++;
         }
-            
+        else if(arr[i] < arr2[j])
+        {
+            i++;
+        }
+        else
+        {
+            j++;
+        }
     }
     return tmp;
  }
