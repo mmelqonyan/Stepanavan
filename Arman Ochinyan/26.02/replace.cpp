@@ -17,7 +17,7 @@ int main(){
 
     cout<<"Enter 2 word ";
     getline(cin,str2);
-cout<<str2.size()<<endl;
+
     do{
     cout<<"Enter index ";
     cin>>index;
