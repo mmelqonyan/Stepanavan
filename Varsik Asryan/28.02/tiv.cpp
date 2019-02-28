@@ -10,7 +10,7 @@ int main(){
     cin >> tiv;
     while (baj<=tiv){
        if(tiv%baj == 0){
-        qan++; 
+        can++; 
         }
            
           baj++;
