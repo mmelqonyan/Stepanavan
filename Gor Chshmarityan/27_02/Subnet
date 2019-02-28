@@ -4,6 +4,11 @@
 255.255.254.0
 8   8   7   0
 
+All ip adresses for Erevan subnet 128. 1 gateway, 1 broadcast, 100 used, 26 free to use.
+All ip adresses for Gyumri subnet 128. 1 gateway, 1 broadcast, 63 used, 63 free to use.
+All ip adresses for Vanadzor subnet 64. 1 gateway, 1 broadcast, 58 used, 4 free to use.
+All ip adresses for Ashtarak subnet 32. 1 gateway, 1 broadcast, 22 used, 8 free to use.
+
 Erevan(100)   53.27.22.0/25     255.255.255.128 
 
 53.27.22.1 First ip for Erevan
