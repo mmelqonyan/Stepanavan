@@ -10,7 +10,9 @@ int main(){
     cin >> tiv;
     while (baj<tiv){
        if(tiv%baj == 0){
-        can++; 
+
+        can++;
+           cout<<can; 
         }
            
           baj++;
