@@ -8,14 +8,14 @@ int main(){
     int baj=2;
     cout << " ";
     cin >> tiv;
-    while (baj<=tiv){
+    while (baj<tiv){
        if(tiv%baj == 0){
-        qan++; 
+        can++; 
         }
            
           baj++;
      }
-       if(can == 1){
+       if(can == 0){
             cout <<" zer tivy parz tiv e";
         }
 
