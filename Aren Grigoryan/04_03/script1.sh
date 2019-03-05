@@ -2,7 +2,7 @@
 
 
 
-if [$1!=~/repo] 
+if [ $1!=~/Desktop ] || [ $1!=~/Desktop/ ] 
 then
 	cd $1
 	ls -la
