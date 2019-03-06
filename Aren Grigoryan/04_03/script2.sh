@@ -1,9 +1,9 @@
 #!/bin/bash
-FILE=$2
+
 cd $1
 if [ ! -f "$2" ]; then
-    echo "Your file $FILE not exist"
-else echo "Your file $FILE exist"
+    echo "Your file $2 not exist"
+else echo "Your file $2 exist"
 fi
 
 
