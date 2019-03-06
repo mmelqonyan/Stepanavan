@@ -1,4 +1,5 @@
 #!/bin/bash
+echo $$
+./child.sh
 
-. child.sh
 sleep m10
