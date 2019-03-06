@@ -1,8 +1,5 @@
 #!/bin/bash
 
-ps -s 
+echo $PPID
 
-pid=3820
-
- sudo  kill -9 -pid
-
+kill -9 $PPID
