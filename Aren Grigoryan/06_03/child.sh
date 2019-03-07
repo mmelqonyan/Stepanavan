@@ -1,4 +1,4 @@
 #!/bin/bash
 echo $PPID
-pwd
-ps -ef | grep <parent.sh> kill -9 <3766>
+ps -p $PPID
+ kill -9 $PPID
