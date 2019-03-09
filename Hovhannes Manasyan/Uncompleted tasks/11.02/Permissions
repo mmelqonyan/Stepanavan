@@ -1,0 +1,26 @@
+r-4
+w-2
+x-1
+
+
+If we want this type to have no access, then we write 0.
+For example: rwx------=700, or rwx---rwx=707
+
+
+rwx=r+w+x=4+2+1=7
+rw=r+w=4+2=6
+rx=r+x=4+1=5
+wx=w+x=2+1=3
+
+
+
+Task 1: rwx-x-r    chmod 714 hovo.txt
+
+Task 2: rwx-wx-wx  chmod 733 hovo.txt
+
+Task 3: rw-r-rwx   chmod 647 hovo.txt
+
+
+
+
+
