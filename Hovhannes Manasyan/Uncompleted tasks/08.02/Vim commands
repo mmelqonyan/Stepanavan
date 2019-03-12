@@ -1,0 +1,11 @@
+1.1. find and replace first example  -  :s/text/hovo
+1.2. find and replace in all lines -   :%s/text/hovo/g
+
+2. Delete all lines where we have "text" word   -    :g/text/d
+3. Delete all lines where we haven't "text"word   -  :v/string/d
+4. Find 3 digit-numbers  -  /\<\d\d\d\>     
+5. On/Off lines numbers   -   :set nu  /  :set nu!
+
+
+
+

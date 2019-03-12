@@ -1,0 +1,13 @@
+Task 1!
+
+Type in command line: alias Hovo="bash info.sh" >> ~/.bashrc
+Then type: Hovo <path>
+
+Task 2!
+
+Type in command line: alias Hovo1="bash info1.sh" >> ~/.bashrc
+Then type: Hovo1 <path> <file name>
+
+Task 3!
+Type in command line: alias Hovo2="bash info2.sh" >> ~/.bashrc
+Then type: Hovo2 <path>
