@@ -1,16 +1,29 @@
 #!/usr/bin/python3
 import random
+import sys
 import os
 
-question_arr = ['HH varchapet','HH mayraqaxaq','hh harevan erkir' , 'vrastani mayraqaxaqy']
-answer_arr = [ 'pashinyan', 'erevan','vrastan','tbilisi'] 
+quation_answer={1:{'hh futbolist':'mxitaryan','hh shaxmatist':'petrosyan','hh tsanramartik':'vardanyan'}, 
+                2:{'hh nkarich':'saryan','hh qandakaggorts':'qochar'},
+                3:{'hh mayraqaxaq':'erevan','vrastani mayraqaxaq':'tbilisi','rusastani mayraqaxaq':'moskva'} }
 
-index = random.randint(0, len(question_arr))
+categoria=input("Enter a categoria ")
 
-answer_len=len(answer_arr[index])
-answer=answer_arr[index]
 
-question=question_arr[index]
+if categoria == 'sport':
+	   
+	question, answer = random.choice(list(quation_answer[1].items()))
+
+elif categoria == 'art':
+	question, answer = random.choice(list(quation_answer[2].items()))
+elif categoria == 'city':
+	question, answer = random.choice(list(quation_answer[3].items()))
+else:
+	print("Incorrect categoria Try New ")
+	sys.exit()
+
+answer_len=len(answer)
+
 print(question)
 
 
@@ -63,6 +76,7 @@ def pole_chudes():
 		if letter in str(view):
 			print("You have already guessed this letter\n")
 			print(*view,sep=' ')
+			j -= 1
 			continue
 
 		index=0
