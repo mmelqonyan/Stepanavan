@@ -62,10 +62,8 @@ def sign_up():
 
 def signin():
 
-	with open(path) as fp:
-
-		log_in = input("Enter your login ")
-		pass_wd = input("Enter your Password ")
+	log_in = input("Enter your login ")
+	pass_wd = input("Enter your Password ")
 
 	with open(path) as fp:
 		for x in fp:
