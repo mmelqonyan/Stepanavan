@@ -1,39 +1,41 @@
 #!/usr/bin/python3.5
 
-database = open("database.py", "r+")
-print(arr_dict[1])
 print("Type 1 to Sign in. ")
 print("Type 2 to sign up.")
 Input = input("Choose number: ")
 if int(Input) == 1:
 	username = input("Input  your username: ")
 	password = input("Enter your password: ")
-	if username in database.arr_dict[new_user[username]["username"]] and password in database.arr_dict[new_user[username]["password"]]:
-		print("Welcome " + database.arr_dict[new_user[username]["name"]])
-
-       	else:
-       		print("Wrong username  or password! Try again: ") 
-         
+	db = open("database.txt", "r")
+	if username in dict[username] and password in dict[password]:
+		print("Welcome " + dict["name"])
+		db.close()
+	else:
+		print("Wrong username  or password! Try again: ") 
+		         
 elif int(Input) == 2:
+	db = open("database.txt", "r+")
+	d.write( str(dict))
 
 	username = input("Input username: ")
-	database.arr_dect[new_user[username]] = {}
+	if username not in dict["username"]:
+		password = input("Input password: ")
+		dict["password"] = password
+		rep_password = input("Repeat password: ")
+		dict["repeat_password"] = rep_password
 
-	if username != database.arr_dict[new_user[username]["username"]]:
-		new_user[username]["password"] = input("Input password: ")
-		new_user[username]["repeat_password"] = input("Repeat password: ")
-
-		if new_user[username]["password"] == new_user[username]["repeat_password"]:
-			new_user[username]["name"] = input("Input your name: ")
-			new_user[username]["surename"] = input("Enter your surename: ")
-			database.arr_dict.append(new_user[username])
+		if dict["password"] == dict["repeat_password"]:
+			name = input("Input your name: ")
+			dict["name"] = name
+			surename = input("Enter your surename: ")
+			dict["surename"] = surename
+	
+			str.append(dict)
 		else:
 			print("Reenter password")
 	else:
-             print ("Wrong username")      
-         
-       
-
+             print ("Wrong username")
+	dict = {"username":username,"password":password, "name":name, "surname":surname, "repeat_password":password}
 else:
-    print("Error")
+	print("Error")
 	
