@@ -25,44 +25,63 @@ def sign_up():
 		surname = input("Enter your surname ")
 
 	user['surname'] = surname
-	login = input("Enter your login ")
-	while not login:
-		login = input("Enter your login ")
 
+	login = input("Enter your login ")
+	while not login :
+		login = input("Enter your login ")
+	chack = 0
+	with open(path) as fp:
+		for j in fp:
+			s=json.loads(j)
+			if login == s['login']:
+				chack += 1
+
+	while chack > 0:
+		an_login = input("Enter another login ")
+		if an_login != login:
+			login = an_login
+			chack = 0
+	
 	user['login'] = login
 
 	passwd = input("Enter your password ")
-	while not passwd:
-		passwd = input("Enter your password ")
+	while len(passwd) < 3:
+		passwd = input("Your pass is short Enter password ")
 
 	conf_passwd = input("Confirm your password ")
-	while not conf_passwd or conf_passwd != passwd:
+	while conf_passwd != passwd:
 		conf_passwd = input("Confirm your password ")
 
 	user['passwd'] = passwd
+	name += str(random.randint(1000, 1000000))
+	user['ID'] = name
 	append_record(user)
+	print("Hello " , user['name'] )
+	print("Your ID (Do not say it to others): " , name)
 	print("Congratulations you create accaunt in Facebook")
 
 def signin():
 
 	with open(path) as fp:
-		a={}
+
 		log_in = input("Enter your login ")
 		pass_wd = input("Enter your Password ")
 
+	with open(path) as fp:
 		for x in fp:
+
 			a=json.loads(x)
-			for log in a.values() :
-				if log==log_in :
-					for pas in a.values() :
-						if pas == pass_wd:
-							print("Hello you joined us " , a['name'])
-							sys.exit()
-				else:
-					print("Incorrect Login or Password: Try new!!!")
-					sys.exit()
+			
+			if log_in == a['login']:
+					
+				if pass_wd == a['passwd']:
+					print("Hello you joined us " , a['name'])
+					print("Your ID (Do not say it to others): " , a['ID'])
+					sys.exit()				
 
-
+		print("Incorrect Login or Password: Try new!!!")
+		sys.exit()
+		
 if os.path.getsize(path) == 0:
 	print("For start please Sign up")
 	sign_up()
@@ -70,9 +89,9 @@ if os.path.getsize(path) == 0:
 				
 categoria=input("Select sign in or sign up ")
 
-if categoria.lower() == 'sign up':
+if categoria.lower() == 'sign up' or categoria.lower() == 'signup':
 	sign_up()
-elif categoria.lower() == 'sign in':
+elif categoria.lower() == 'sign in' or categoria.lower() == 'signin':
 	signin()
 else:
 	print("Incorrect categoria: Please select sign up or sign in : Try new")
