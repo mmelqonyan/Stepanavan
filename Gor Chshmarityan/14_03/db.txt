@@ -1,0 +1,7 @@
+{'password': 'ooo', 'name': 'ooo', 'login': 'ooo'}
+{'password': '345', 'name': 'kelio', 'login': 'gor'}
+{'password': '333', 'login': 'stepanavan', 'name': 'training'}
+{'name': 'aziz', 'password': 'klorik', 'login': 'klor'}
+{'name': 'hayastan', 'password': 'kirovakan', 'login': 'erevan'}
+{'name': 'name', 'login': 'login', 'password': 'password'}
+{'password': 'levon', 'login': 'aren', 'name': 'gor'}
