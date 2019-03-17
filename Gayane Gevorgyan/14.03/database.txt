@@ -1,1 +1,1 @@
-{"username":"admin","password":"qazwsx","name":"Admin","surname":"Adminyan","repeat_password":"qazwsx"}
+{'password': 'qazwsx', 'name': 'Admin', 'username': 'admin', 'repeat_password': 'qazwsx', 'surname': 'Adminyan'}
