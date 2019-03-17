@@ -22,15 +22,19 @@ def chess_board():
                 print(chess[i][j],vert,end="")
         print("\n"," ",hor*8)
         print("  ","  A ","  B ","  C ","  D ","  E ","  F ","  G ","  H "  )
+    
 
         piece=input("Input piece name: ")
-        for i in range(8):
-            for j in range(8):
-                if piece == chess[i][j]:
-                    print("i=",i,"j=",j)
-                    chess[i][j]="    "
-                    break
-
+        while piece != chess[i][j]:
+            for i in range(8):
+                for j in range(8):
+                    if piece == chess[i][j]:
+                        print("i=",i,"j=",j)
+                        chess[i][j]="    "
+                        break
+            else:
+                piece= input("Input the correct name: ")
+            break
         i=int(input("Input new i in range 2-5 "))
         j=int(input("Input new j in range 0-7 "))
         chess[i][j]=piece
