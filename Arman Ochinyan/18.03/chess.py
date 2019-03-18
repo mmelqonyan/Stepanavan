@@ -70,42 +70,49 @@ class game:
 		get2 = get1 = set2 = set1 = 0
 
 		get_fig = input("Select %s figure " % self.fig_color)
+		get_fig = get_fig.lower()
 
 		while len(get_fig) != 2 or not get_fig[1].isdigit() or not get_fig[0].isalpha():
 			get_fig = input("Select correct index %s figure " % self.fig_color)
+			get_fig = get_fig.lower()
 
 		get1 = ord(get_fig[0])-97
 		get2 = ord(get_fig[1])-48
 
 		check = False
-		check1 = False
-
+	
 		if board[get2-1][get1] not in self.fig_chk:
-			check1 = True
+			check = True
 
-		while check1 or 0 > get1 or get1 > 8 or 1 > get2 or get2 > 8 :
+		while check or 0 > get1 or get1 > 8 or 1 > get2 or get2 > 8 :
 
 			get_fig = input("Select correct index %s figure " % self.fig_color)
+			get_fig = get_fig.lower()
 			get1 = ord(get_fig[0])-97
 			get2 = ord(get_fig[1])-48
 
 			if board[get2-1][get1] in self.fig_chk:
-				check1 = False
+				check = False
 
 
 		set_fig = input("Select where do you want to go? ")
+		set_fig = set_fig.lower()
+
 		while len(set_fig) != 2 or not set_fig[1].isdigit() or not set_fig[0].isalpha():
 			set_fig = input("Select correct index where do you want to go? ")
+			set_fig = set_fig.lower()
 
 		set1 = ord(set_fig[0])-97
 		set2 = ord(set_fig[1])-48
-
+		check = False
+		
 		if board[set2-1][set1] in self.fig_chk:
 			check = True
 
 		while check or 0 > set1 or set1 > 8 or 1 > set2 or set2 > 8 or len(set_fig) != 2:
 			
 			set_fig = input("Select correct index where do you want to go? ")
+			set_fig = set_fig.lower()
 			set1 = ord(set_fig[0])-97
 			set2 = ord(set_fig[1])-48
 
