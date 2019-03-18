@@ -74,12 +74,19 @@ class game:
 		get2 = ord(get_fig[1])-48
 
 		check = False
+		check1 = False
 
-		while  0 > get1 or get1 > 8 or 1 > get2 or get2 > 8 or (board[get2-1][get1] == '|__') :
+		if board[get2-1][get1] not in self.fig_chk:
+			check1 = True
+
+		while check1 or 0 > get1 or get1 > 8 or 1 > get2 or get2 > 8  :
 
 			get_fig = input("Select correct index %s figure " % self.fig_color)
 			get1 = ord(get_fig[0])-97
 			get2 = ord(get_fig[1])-48
+
+			if board[get2-1][get1] in self.fig_chk:
+				check1 = False
 
 
 		set_fig = input("Select where do you want to go? ")
