@@ -23,7 +23,6 @@ def chess_board():
         print("\n"," ",hor*8)
         print("  ","  A ","  B ","  C ","  D ","  E ","  F ","  G ","  H "  )
     
-
         piece=input("Input piece name: ")
         while piece != chess[i][j]:
             for i in range(8):
@@ -35,9 +34,15 @@ def chess_board():
             else:
                 piece= input("Input the correct name: ")
             break
-        i=int(input("Input new i in range 2-5 "))
+
+        i=int(input("Input new i in range 0-7 "))
         j=int(input("Input new j in range 0-7 "))
-        chess[i][j]=piece
+        if chess[i][j] != "   ":
+            print("Field not empty")
+            i=int(input("Input new i in range 0-7 "))
+            j=int(input("Input new j in range 0-7 "))
+        else:
+            chess[i][j]=piece
 
         for i in range (8):
             print("\n"," ",hor*8)
@@ -48,4 +53,3 @@ def chess_board():
         print("  ","  A ","  B ","  C ","  D ","  E ","  F ","  G ","  H "  )
         n-=1
 chess_board()
-
