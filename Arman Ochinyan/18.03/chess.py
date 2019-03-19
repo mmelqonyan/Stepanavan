@@ -6,11 +6,11 @@ board = []
 symbol = '|__'
 
 for i in range(8):
-    board.append([])
-    for j in range(8):
-        board[i].append(symbol)
+    board.append([symbol]*8)
+    
+c = ['   A ',' B ',' C ',' D ',' E ',' F ',' G ',' H']
 def Board():
-	c = ['   A ',' B ',' C ',' D ',' E ',' F ',' G ',' H']
+	
 	print(*c)
 	for x in range(len(board)):
 		print(x+1, *board[x])
