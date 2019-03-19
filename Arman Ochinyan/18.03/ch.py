@@ -47,7 +47,7 @@ for i in range(8):
 	board[7][5] = sevOficer
 	board[7][3] = sevTaguhi 
 	board[7][4] = sevTagavor 
-c = ['    A ',' B ',' C ',' D ',' E ',' F ',' J ',' H']
+c = ['    A ',' B ',' C ',' D ',' E ',' F ',' G ',' H']
 def Board():
 	
 	print(*c)
