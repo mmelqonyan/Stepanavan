@@ -27,6 +27,11 @@ def creatArray():
         j=n-i-1
         sum_diag2=sum_diag2+array[i][j]
     print(sum_diag2)
+
+    if sum_diag1>sum_diag2:
+        print("Maximum = sum diagonal1")
+    else:
+        print("Maximum = sum diagonal2")
    
 creatArray()
 #diagonal1()

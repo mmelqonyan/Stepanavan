@@ -15,25 +15,30 @@ def chess_board():
         
     print(chess)
     while n != 0:
+        
         for i in range (8):
-            print(8-i,"\n"," ",hor*8)
-            print(" ",vert,end="")
+            print("\n"," ",hor*8)
+            print(8-i,vert,end="")
             for j in range (8):
                 print(chess[i][j],vert,end="")
         print("\n"," ",hor*8)
         print("  "," A "," B "," C "," D "," E "," F "," G "," H "  )
 
-#def queen():    
+#5def queen(): 
+        chess[i][j]="  "   
         piece="Q"
         i=int(input("Input i in range 0-7 "))
         j=int(input("Input j in range 0-7 "))
         chess[i][j]=piece
+        pos1=i
+        pos2=j
+
 
 #def position():   
         for i in range (8):
-            print(8-i,"\n"," ",hor*8)
-            print(" ",vert,end="")
-            for j in range (8):
+            print("\n"," ",hor*8)
+            print(8-i,vert,end="")
+            for j in range (8):   
                 print(chess[i][j],vert,end="")
         print("\n"," ",hor*8)
         print("  "," A "," B "," C "," D "," E "," F "," G "," H "  )
@@ -41,16 +46,19 @@ def chess_board():
 #def new_position():
         new_i=int(input("Input new i in range 0-7 "))
         new_j=int(input("Input new j in range 0-7 "))
-        if new_i == i or new_j == j or new_i+new_j == i+j or new_i+new_j-2 == i+j or new_i+new_j+2 == i+j:
-            chess[i][j]="  "
+        
+        print(pos1,pos2)
+        if new_i +new_j == pos1+pos2 or new_i +new_j-2 == pos1+pos2 or new_i +new_j+2 == pos1+pos2 or new_i == pos1 or new_j == pos2 or new_i-pos1 == new_j-pos2 or pos1-new_i == pos2-new_j:
             chess[new_i][new_j]=piece
+            chess[pos1][pos2]="  "
+            
         else:        
             print("Wrong field")
-            i=int(input("Input new i in range 0-7 "))
-            j=int(input("Input new j in range 0-7 ")) 
+            
+
         n-=1
 chess_board()
-queen()
-position()
-new_position()
-
+#queen()
+#position()
+#new_position()
+#or (new_j == j) or (new_i+new_j == i+j) or (new_i+new_j-2 == i+j) or (new_i+new_j+2 == i+j)
