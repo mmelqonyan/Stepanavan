@@ -1,64 +1,57 @@
 #!/usr/bin/python3.5
  
-def chess_board():
-    
-    chess=[]
-    n=5
-    vert="|"
-    hor="____"
- 
+def chess():  
+    chess=[]  
     for i in range (8):
         chess.append([])
         for j in range (8):
             field=("  ")
             chess[i].append(field)
-        
-    print(chess)
-    while n != 0:
-        
-        for i in range (8):
-            print("\n"," ",hor*8)
-            print(8-i,vert,end="")
+    number=['8','7','6','5','4','3','2','1']
+    letter=['A','B','C','D','E','F','G','H']
+
+    def board():       
+        for i in range (8):           
+            print("\n"," ","____"*8)
+            print(8-i,"|",end="")
             for j in range (8):
-                print(chess[i][j],vert,end="")
-        print("\n"," ",hor*8)
-        print("  "," A "," B "," C "," D "," E "," F "," G "," H "  )
-
-#5def horse(): 
+                print(chess[i][j],"|",end="")
+        print("\n"," ","____"*8)
+        print("  "," A "," B "," C "," D "," E "," F "," G "," H "  )        
         chess[i][j]="  "   
-        piece="H"
-        i=int(input("Input i in range 0-7 "))
-        j=int(input("Input j in range 0-7 "))
-        chess[i][j]=piece
-        pos1=i
-        pos2=j
-
-
-#def position():   
-        for i in range (8):
-            print("\n"," ",hor*8)
-            print(8-i,vert,end="")
-            for j in range (8):   
-                print(chess[i][j],vert,end="")
-        print("\n"," ",hor*8)
-        print("  "," A "," B "," C "," D "," E "," F "," G "," H "  )
-                
-#def new_position():
-        new_i=int(input("Input new i in range 0-7 "))
-        new_j=int(input("Input new j in range 0-7 "))
-        
-        print(pos1,pos2)
-        if new_i +new_j == pos1+pos2+3 or new_i +new_j == pos1+pos2-3 or new_i +new_j == pos1+pos2+1 or new_i+new_j == pos1+pos2-1 :
-            chess[new_i][new_j]=piece
-            chess[pos1][pos2]="  "
+      
+    board()
+    def piece(n):
+        input_let_k=input("Input letter field for knight : ")
+        input_num_k=input("Input number field for knight : ")
+        if input_let_k in letter:
+            j=int(letter.index(input_let_k))          
+        else:
+            print("You input wrong letter") 
+        if input_num_k in number:
+            i=int(number.index(input_num_k))                      
+        else:
+            print("You input wrong number")
+        chess[i][j]="H"
+        pos_i=i
+        pos_j=j
+    
+        while n != 0:
+            board()
+            new_let_k=input("Input new letter H: ")
+            new_num_k=input("Input new number H: ")
+            new_ik=int(number.index(new_num_k))
+            new_jk=int(letter.index(new_let_k))
             
-        else:        
-            print("Wrong field")
+            if new_ik +new_jk == pos_i+pos_j+3 or new_ik +new_jk == pos_i+pos_j-3 or new_ik +new_jk == pos_i+pos_j+1 or new_ik+new_jk == pos_i+pos_j-1:
+                chess[new_ik][new_jk]="H"
+                chess[pos_i][pos_j]="  "
+                pos_i=new_ik
+                pos_j=new_jk
             
-
-        n-=1
-chess_board()
-#queen()
-#position()
-#new_position()
-#or (new_j == j) or (new_i+new_j == i+j) or (new_i+new_j-2 == i+j) or (new_i+new_j+2 == i+j)
+            else:        
+                print("Wrong field")
+         
+            n-=1
+    piece(5)
+chess()
