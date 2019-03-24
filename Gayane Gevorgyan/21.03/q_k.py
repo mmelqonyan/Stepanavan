@@ -1,7 +1,10 @@
 #!/usr/bin/python3.5
  
-def chess():  
-    chess=[]  
+def chess():
+    
+    chess=[]
+    
+    
     for i in range (8):
         chess.append([])
         for j in range (8):
@@ -22,13 +25,27 @@ def chess():
       
     board()
     def piece(n):
+        input_letter=input("Input letter field for queen : ")
+        input_number=input("Input number field for queen : ")
+        if input_letter in letter:
+            j=int(letter.index(input_letter))          
+        else:
+            print("You input wrong letter") 
+        if input_number in number:
+            i=int(number.index(input_number))                      
+        else:
+            print("You input wrong number")
+        chess[i][j]="Q"
+        pos1=i
+        pos2=j
+
         input_let_k=input("Input letter field for knight : ")
         input_num_k=input("Input number field for knight : ")
-        if input_let_k in letter:
+        if input_letter in letter:
             j=int(letter.index(input_let_k))          
         else:
             print("You input wrong letter") 
-        if input_num_k in number:
+        if input_number in number:
             i=int(number.index(input_num_k))                      
         else:
             print("You input wrong number")
@@ -37,6 +54,24 @@ def chess():
         pos_j=j
     
         while n != 0:
+            board()
+            new_letter=input("Input new letter Q: ")
+            new_number=input("Input new number Q: ")
+            new_n=int(number.index(new_number))
+            new_l=int(letter.index(new_letter))       
+            
+            if new_n +new_l == pos1+pos2 or new_n +new_l-2 == pos1+pos2 or new_n +new_l+2 == pos1+pos2 or new_n == pos1 or new_l == pos2 or new_n-pos1 == new_l-pos2 or pos1-new_n == pos2-new_l:
+                chess[new_n][new_l]="Q"
+                chess[pos1][pos2]="  "
+                pos1=new_n
+                pos2=new_l
+            else:        
+                print("Wrong field")
+            if pos1 == pos_i and pos2 == pos_j:
+                chess[pos_i][pos_j]="Q"
+                print("   WIN QUEEN!!!")
+                break
+
             board()
             new_let_k=input("Input new letter H: ")
             new_num_k=input("Input new number H: ")
@@ -51,7 +86,11 @@ def chess():
             
             else:        
                 print("Wrong field")
-         
+            if pos1 == pos_i and pos2 == pos_j:
+                chess[pos1][pos1]="H"
+                print("\n   WIN KNIGHT!!!")
+                break
+            
             n-=1
     piece(5)
 chess()
