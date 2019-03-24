@@ -2,20 +2,12 @@
 import sys
 import math
 
-
-
 class add_pop:
 
-
 	a=[1,2,3]
-	def __init__(self,text):
-		self.text = text
-		
-
-	def add(self):
-
-		
-		self.a.append(self.text) 
+	
+	def add(self,text):
+		self.a.append(text) 
 		return self.a
 
 	def Pop(self):
@@ -23,10 +15,21 @@ class add_pop:
 		self.a.pop()
 		return self.a
 
-
-x = add_pop('777')
+print("array - ", *add_pop.a)
 
 if __name__ == '__main__':
-	print(*x.Pop())
-	print(*x.add())
+
+		
+	check = input("Append(1) or Pop(2) ")
+	if check == '1':
+
+		text = input("Enter text for append ")
+		x = add_pop()		
+		print("array - ", x.add(text))
+					
+	elif check > '0':
+		x = add_pop()
+		print("array - ", *x.Pop())
+		
+
 	
