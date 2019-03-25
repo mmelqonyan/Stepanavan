@@ -1,16 +1,19 @@
 #!/usr/bin/python3.5
-class Board(objekt):
-    def _init_(self):
-        self.board = [['❒ ']*8 for y in range(8)]
-    def _str_(self):
-        res = ''
-        for y in range(8,0,-1):
-            res += ''.join(map(str,self.board[y])) + "\n"
-        return res
+class Board:
 
-a = Board()
-print a
-letter = [" ", "A" ,"B" , "C" , "D" , "E" , "F ", "G", "H"]
-print (letter)
+    board = [['❒ ']*8 for y in range(8)]
+    letter= [" a", " b", " c", " d", " e", " f", " g", " h"]
+
+    def draw(self):
+        self.board.append(self.letter)
+        column = 0
+        for i in self.board:
+            if column  < 8:
+                column+=1
+            else:
+                column=" "
+            print(column,*i, sep='', end="\n")
+create = Board()
+create.draw()
 
 
