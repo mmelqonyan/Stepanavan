@@ -13,7 +13,8 @@ class Personage:
         print(discription)
 
     def shot(self):
-        weapon_a = "a"
+       
+        weapon_a = input("a")
         if weapon_a == "a": 
             self.ammunation-=1
         else:
