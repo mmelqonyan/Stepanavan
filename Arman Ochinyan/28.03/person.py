@@ -6,7 +6,6 @@ try:
 	import os
 except ImportError:
 	print("import error")
-	sys.exit()
 
 class person:
     
@@ -48,13 +47,11 @@ try:
 		tariq = int(input("Մուտքագրեք ձեր տարիքը "))
 	except ValueError:
 		print("ValueError")
-		sys.exit()
 	except Exception:
 		print("Error")
 	try:
 		if tariq < 18:
 			print("Դուք չափահաս չեք հաջողություն")
-			sys.exit()
 	except NameError:
 		print("NameError")
 
@@ -62,14 +59,12 @@ try:
 		check = int(input("Կրակել(1),թե պաշտպանվել(2) "))
 	except Exception:
 		print("ValueError")
-		sys.exit()
 	try:
 		if check == 1:
 			try:
 				patron = int(input("Որքան անգամ կրակել "))
 			except Exception:
 				print("ValueError")
-				sys.exit()
 			while patron > 100:
 				patron = int(input("Մուտքագրեք 100 ից փոքր թիվ "))
 			krakel = child(anun,patron,tariq)
@@ -83,7 +78,7 @@ try:
 				patron = int(input("Որքան անգամ կրակել "))
 			except Exception:
 				print("ValueError")
-				sys.exit()
+				
 			spanel = child(anun,patron,tariq)
 			try:
 				print(spanel.Spanel())
