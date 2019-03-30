@@ -79,7 +79,7 @@ def game():
 		board2[index1 - 1][index2 - 1] = "\033[93m{}\033[00m".format(navak)
 
 		check = sum(x.count("\033[93m{}\033[00m".format(navak)) for x in board2)
-		if check == 10 :
+		if check == 9 :
 			tesq(board2)
 			print("You Win!!!")
 			sys.exit()
@@ -89,3 +89,4 @@ def game():
 	tesq(board2)
 	game()
 
+game()
