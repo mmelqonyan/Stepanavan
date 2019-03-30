@@ -3,7 +3,7 @@ import os
 import sys
 import random
 '''
-	Please resize your terminal sides
+	Pleace resize your terminal sides
 '''
 board = []
 board2 = []
@@ -20,35 +20,41 @@ def tesq(bo):
 		print(*bo[i],i+1,sep='')
 
 navak = u"|\U0001F6E5 "
-def bout():
+def boat():
 
 	pos = random.randint(0, 9)
-	while pos-1 < 0 or pos+1 > 9 or board[pos][pos] == navak or board[pos-1][pos] == navak or board[pos][pos+1]==navak :
+	j = random.randint(0,1)
+	i = abs(j - 1)
+	while pos-1 < 0 or pos+1 > 9 or board[pos][pos] == navak or board[pos-1][pos] == navak or board[pos][pos+1] == navak or \
+			 board[pos][pos-1] == navak or board[pos+1][pos] == navak :
 		pos = random.randint(0, 9)
-	board[pos][pos-1] = navak	
+	board[pos-i][pos-j] = navak	
 	board[pos][pos] = navak
-	board[pos][pos+1] = navak	
+	board[pos+i][pos+j] = navak	
 
 	pos = random.randint(0, 9)
-	while pos-1 < 0 or pos+1 > 9 or board[pos][pos] == navak or board[pos-1][pos]==navak:
+	j = random.randint(0,1)
+	i = abs(j - 1)
+	while pos-1 < 0 or pos+1 > 9 or board[pos][pos] == navak or board[pos-1][pos]==navak or board[pos][pos-1]==navak:
 		pos = random.randint(0, 9)
-	board[pos-1][pos]=navak	
+	board[pos-i][pos-j]=navak	
 	board[pos][pos]=navak
 
 	pos = random.randint(0, 9)
-	while pos-1 < 0 or pos+1 > 9 or board[pos][pos] == navak or board[pos-1][pos] == navak or board[pos+1][pos]==navak:
+	j = random.randint(0,1)
+	i = abs(j - 1)
+	while pos-1 < 0 or pos+1 > 9 or pos+2 > 9 or board[pos][pos] == navak or board[pos-1][pos] == navak or board[pos][pos+1] == navak or board[pos][pos+2] == navak or \
+			 board[pos][pos-1] == navak or board[pos+1][pos] == navak or board[pos+2][pos] == navak:
 		pos = random.randint(0, 9)
-	board[pos-1][pos] = navak	
+	board[pos-i][pos-j] = navak	
 	board[pos][pos] = navak
-	board[pos+1][pos] = navak	
+	board[pos+i][pos+j] = navak	
+	if j == 1:
+		board[pos+i][pos+j+1] = navak
+	else:
+		board[pos+i+1][pos+j] = navak
 
-	pos = random.randint(0, 9)
-	while pos-1 < 0 or pos+1 > 9 or board[pos][pos] == navak or board[pos][pos-1]==navak:
-		pos = random.randint(0, 9)
-	board[pos][pos-1]=navak	
-	board[pos][pos]=navak
-
-bout()
+boat()
 
 tesq(board)
 tesq(board2)
@@ -57,10 +63,10 @@ def game():
 	
 	index1 = index2 = 0
 	try:
-		index1 = int(input("Enter 1 index of board (1-8) "))
-		index2 = int(input("Enter 2 index of board (1-8) "))
+		index1 = int(input("Enter 1 index of board (1-10) "))
+		index2 = int(input("Enter 2 index of board (1-10) "))
 		if index1 <= 0 or index1 > 10 or index2 <= 0 or index2 > 10:
-			print("You already have that index : New Index ")
+			print("Select correct index of board ")
 			game()
 		if navak in board2[index1 - 1][index2 - 1] or '|O_' in board2[index1 - 1][index2 - 1]:
 			print("You already have that index : New Index ")
@@ -78,10 +84,8 @@ def game():
 			print("You Win!!!")
 			sys.exit()
 	else:
-
 		board2[index1 - 1][index2 - 1] = '|O_'
 	tesq(board)
 	tesq(board2)
 	game()
 
-game()
