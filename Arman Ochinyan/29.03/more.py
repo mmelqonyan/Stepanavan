@@ -22,6 +22,7 @@ def tesq(bo):
 navak = u"|\U0001F6E5 "
 
 def boat():
+	# Random Horizonal or Diaganal possitions
 	list = []
 	temp = []
 	pos = random.randint(0, 9)
