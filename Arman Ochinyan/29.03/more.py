@@ -2,7 +2,6 @@
 import os
 import sys
 import random
-
 '''
 	Pleace resize your terminal sides
 '''
@@ -96,7 +95,8 @@ def game():
 		
 		if check == 9 :
 			tesq(board2)
-			print("\033[92m {}\033[00m" .format("You Win!!!"))
+			print("\033[95m{}\033[00m" .format('The 3 boat sank '))
+			print("\033[92m{}\033[00m" .format("You Win!!!"))
 			sys.exit()
 		
 	else:
