@@ -24,12 +24,12 @@ def check_sim(sim1,sim2,text):
 	
 if temp[0].isdigit():
 	a = False
-	if temp[1][0] == '"' and temp[1][-1] == '"':
-		a = check_sim('"','"',temp[1])
+	if check_sim('"','"',temp[1]):
+		a = True
 	elif temp[1].isdigit():
 		a = True
-	elif temp[1][0] == '(' and temp[1][-1] == ')':
-		a = check_sim('(',')',temp[1])
+	elif check_sim('(',')',temp[1]):
+		a = True
 	if a:
 		print('Valid')	
 	else:
@@ -38,24 +38,24 @@ elif isinstance(temp[0], str):
 
 	if temp[0][0] == '"' and temp[0][-1] == '"':
 		b = False
-		if temp[1][0] == '"' and temp[1][-1] == '"':
-			b = check_sim('"','"',temp[1])
+		if check_sim('"','"',temp[1]):
+			b = True
 		elif temp[1].isdigit():
 			b = True
-		elif temp[1][0] == '(' and temp[1][-1] == ')':
-			b = check_sim('(',')',temp[1])
+		elif check_sim('(',')',temp[1]):
+			b = True
 		if b:
 			print('Valid')	
 		else:
 			print('InValid')
-	elif temp[0][0] == '(' and temp[0][-1] == ')':
+	elif check_sim('(',')',temp[1]):
 		c = False
-		if temp[1][0] == '"' and temp[1][-1] == '"':
-			c = check_sim('"','"',temp[1])
+		if check_sim('"','"',temp[1]):
+			c = True
 		elif temp[1].isdigit():
 			c = True
-		elif temp[1][0] == '(' and temp[1][-1] == ')':
-			c = check_sim('(',')',temp[1])
+		elif check_sim('(',')',temp[1]):
+			c = True
 		if c:
 			print('Valid')	
 		else:
