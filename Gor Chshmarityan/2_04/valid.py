@@ -4,6 +4,8 @@ with open('db.py', 'r') as var:
     obj = var.read()
 if obj[0] == "{" and obj[-1] == "}":
     temp = obj[1:-2]
+elif obj[0] == "{" and obj[-2] == "}":
+    temp = obj[1:-3]
 temp = temp.split(":")
 if temp[0].isdigit() == True:
     print("Valid")
