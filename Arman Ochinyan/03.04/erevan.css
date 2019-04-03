@@ -1,0 +1,34 @@
+.inh_spanid{
+	
+		margin: 100px 250px 100px;
+       	font-size: 100px;
+        color: red;
+        text-align: center;
+}
+.inh_spanid:hover{
+	color: #66ff99;
+	font-size: 200px;
+}
+.imgclass:hover{
+	width: 350px;
+	height: 350px;
+}
+.pclass{
+	color: blue;
+
+}
+.pclass:hover{
+	color: red;
+	font-size: 20px;
+}
+.bodyclass {
+  background-image: url("recurces/1.png");
+  margin-top: 80px;
+}
+
+
+.inp_class{
+	height: 40px;
+	 width : 100px ;
+	 border-radius: 50%
+}
