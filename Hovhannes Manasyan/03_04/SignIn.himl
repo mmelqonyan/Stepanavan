@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SingIn</title>
+ </head>
+<form>
+  <fieldset>
+    <legend>SingIn</legend>
+    <p><label for="name">Login: <em>*</em></label><input type="text" id="name"></p>
+    <p><label for="email">Password:</label><input type="email" id="email"></p>
+  </fieldset>
+</form><a href="file:///home/hovo/Desktop/New.html">Enter</a>
