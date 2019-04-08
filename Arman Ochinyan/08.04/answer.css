@@ -1,9 +1,11 @@
+
 .frs_f1{
 	background-color: white;
 	padding-bottom: 20px;
 	font-size: 38px;
 }
 .general_div{
+	title :'dss';
 	margin:auto;
 	width: 80%;
 	background-color: rgb(100,100,100);
@@ -60,7 +62,9 @@
 .inh_div a:hover{
 	color: #5cd65c;
 }
-
+.inh_div h1 {
+	width: 50%;
+}
 .sbm_cl:hover {
   box-shadow: 0px 7px 9px 7px rgba(174, 219, 187, 0.9);
 }
