@@ -1,0 +1,82 @@
+
+  body{
+    margin: auto;
+    padding: 10px;
+  }
+  #main-header {
+    font-size: 50px;
+    color:rgba(255, 255, 255, 0.932);
+    margin: 20px;
+  }
+
+  #second-header {
+    margin: 20px;
+    color: rgb(10, 10, 10);
+  }
+
+  #paragraph{
+    margin: 20px;
+    margin-top:40px;
+  }
+
+  #big_div {
+    border: 5px solid  rgb(19, 9, 9);;
+    background-color:  rgb(19, 9, 9);
+    height: 90vh;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  #inner {
+    margin: 20px;
+    border-style:ridge;
+    background-color: rgba(255, 255, 255, 0.979);
+    height: 70vh;
+    width: 100%;
+  }
+  .red{
+    background-color: rgba(165, 42, 42, 0.137);
+    color: blueviolet
+  }
+  #ul-container{
+    margin: 20px;
+    background-color: rgba(41, 35, 35, 0.103);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    margin-top:5%; 
+  }
+  .white-block{
+    height: 20px;
+    width: 50px;
+    background-color: #fff;
+  }
+  .button {
+    margin: 20px;
+    background-color: rgba(50, 170, 2, 0.952);
+    height:50px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    margin-top:10%; 
+  }
+
+  .button:hover{
+    background-color: rgba(5, 122, 231, 0.596);
+    transition:all ease 500ms;
+  }
+
+  .button:active{
+    background-color: rgba(5, 122, 231, 0.945);
+    transition:all ease 500ms;
+  }
+
+  .link{
+    display: inline-block;
+    margin: 20px;
+  }
