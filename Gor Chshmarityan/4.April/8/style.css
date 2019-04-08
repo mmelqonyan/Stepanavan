@@ -1,0 +1,57 @@
+.font {
+    font-size: 25px;
+    
+}
+.arrange {
+margin-left: 250px;
+
+}
+.table1 {
+height: 440px;
+  width: 75%;
+  font-size: 25px;
+  padding-left: 16px;
+  background-color: #666666;
+  color: white;
+  
+
+}
+.table2 {
+    color:black;
+    height: 350px;
+    margin-right: 16px;
+    margin-top: 15px;
+    background-color: white;
+
+}
+.table3 {
+    color:black;
+    height: 310px;
+    margin-right: 16px;
+    margin-left: 15px;
+}
+.table4 {
+    color:black;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.table5 {
+    background-color: #e6e6e6;
+    height: 50px;
+    margin-top: 17px;
+    font-size: 20px;
+    padding-top: 15px;
+}
+.button {
+    background-color: green;
+    height: 45px;
+    width: 200px;
+    margin-top: 40px;
+    color: white;
+
+}
+.ref{
+    margin-top: 40px;
+    font-size: 20px;
+    color: black;
+}
