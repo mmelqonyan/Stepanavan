@@ -1,0 +1,113 @@
+#top{
+  font-size: 40pt;
+  padding-left:26pt; 
+}
+.main {
+  font-family: Arial, Verdana,  sans-serif; /* Семейство шрифтов */
+  font-size: 40pt; /* Размер основного шрифта в пунктах  */
+  color:#FFFFFF; /* Цвет основного текста */ 
+  background: #5C5C5C; /* Цвет фона */
+  padding: 50px; /* Поля */
+  padding-bottom:25px;
+  box-sizing: border-box
+  width: 100px; /* Ширина слоя */
+  margin-left:0px; /* Значение отступов */
+  border-left:20px; /* Параметры границы */
+}
+
+#exc {
+  float:right;
+  font-size: 40pt;
+  padding-left:26pt; 
+  position: absolute;
+  left: 5%;
+  top:55%;
+}
+
+#kofe {
+  float:right;
+  font-size: 20pt;
+  padding-left:26pt; 
+  position: absolute;
+  left: 5%;
+  top:80%;
+}
+#blok {
+  float:right;
+  font-size: 15pt;
+  position: absolute;
+  left:7.5%;
+  top:90%;
+  background:#e0e0d2;
+  font-family: Arial, Verdana,  sans-serif; /* Семейство шрифтов */
+  color:#000000; /* Цвет основного текста */ 
+  margin-left:0%;
+  padding:2%;
+  padding-right:45.5%;
+}
+
+#form1{
+  float:right;
+}
+#form2{
+  float:left;
+}
+
+.send{
+  float:right;
+  padding-left:26pt; 
+  position: absolute;
+  left: 7.5%;
+  top:112%;
+  background:#4CAF50;
+  color:white ;
+  font-size: 24px;
+  padding: 32px 16px;
+  border: 2px solid #4CAF50;
+}
+#fin{
+  float:left;
+  padding-left:0pt; 
+  position: absolute;
+  left: 7.5%;
+  top:140%;
+  font-size:20px;
+}
+
+#tag{
+  color: #B6075E;
+  font-size: 130%
+}
+
+.left{
+  background: #5C5C5C; /* Цвет фона */
+  box-sizing:border-box;
+  padding: 2%; /* Поля */
+  padding-bottom:100%;
+  box-sizing: border-box;
+  margin-right:96%;
+  height: 100%;
+  float:left;
+}
+
+.right{
+  background: #5C5C5C; /* Цвет фона */
+  box-sizing:border-box;
+  padding:2%; /* Поля */
+  padding-bottom:100%;
+  box-sizing: border-box;
+  margin-left:96%;
+  height: 100%;
+}
+
+.footer {
+  background: #5C5C5C; /* Цвет фона */
+  padding:2%;
+  box-sizing: border-box;
+  position: relative;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+
