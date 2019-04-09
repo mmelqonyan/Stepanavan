@@ -1,0 +1,36 @@
+body{
+    width: 55%;
+    margin: auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+  }
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 50px;
+    font-size: 30px;
+    text-align: center
+    
+  }
+
+  .grid-container1 {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+  }
+
+
+
+  #top-left {
+    font-size:40px;
+    text-align: left;
+  }
+
+  #mod {
+    font-size:20px;
+    }
