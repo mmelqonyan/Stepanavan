@@ -1,0 +1,88 @@
+html, body, .grid-container { height: 100%; margin: 0; }
+
+.grid-container * { 
+ position: relative;
+ 
+}
+
+.grid-container *:after { 
+ position: absolute;
+ top: 15;
+ left: 15;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "input" "Nums" "Numss" "result";
+  width: 30%;
+  height: 70%;
+  margin: auto;
+}
+
+.input { grid-area: input; }
+
+.result { grid-area: result; }
+
+.Numss {
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "Seven-plus eight-zero Nine-minus Divide";
+  grid-area: Numss;
+}
+
+.Seven-plus {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "Seven" "Plus";
+  grid-area: Seven-plus;
+}
+
+.Seven { grid-area: Seven; }
+
+.Plus { grid-area: Plus; }
+
+.eight-zero {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "eight" "zero";
+  grid-area: eight-zero;
+}
+
+.eight { grid-area: eight; }
+
+.zero { grid-area: zero; }
+
+.Nine-minus {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "Nine" "Minus";
+  grid-area: Nine-minus;
+}
+
+.Nine { grid-area: Nine; }
+
+.Minus { grid-area: Minus; }
+
+.Divide { grid-area: Divide; }
+
+.Nums {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "One-Four Two-Five Three-Six Multiply";
+  grid-area: Nums;
+}
+
+.One-Four {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "One" "Four";
+  grid-area: One-Four;
