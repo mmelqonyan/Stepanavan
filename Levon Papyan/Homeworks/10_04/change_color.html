@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+            
+        <div id="changecolor">
+
+                <button type="button" onclick="change_color()">Change Color</button>
+
+        </div>
+
+            <script>
+
+            var count = 0; 
+            var colors = ["red", "blue", "orange"] 
+            function change_color() { 
+                if(count >= colors.length-1){ 
+                    count = 0; 
+                } else { 
+                    count++; 
+                } 
+
+            document.getElementById("changecolor").style.backgroundColor = colors[count]; 
+        } 
+        </script>
+    </body>
+
+</html>
