@@ -1,0 +1,31 @@
+
+#main{
+ padding:5px;
+ background-color:gray;
+ width:300px;
+ height:400px;
+ display:grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr;
+ grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+ grid-template-areas: 
+   "display display display display"
+   "cdisplay cdisplay cdisplay cdisplay"
+   "cleara clear divide multiply"
+   "seven eight nine minus"
+   "four five six plus"
+   "one two three equal"
+ }
+#display{
+   grid-area:display;
+   text-align: right;
+   background-color:#5B5B5B;
+ }
+#cdisplay{
+   grid-area:cdisplay;
+   text-align: right;
+   background-color:#617E57;
+ }
+ 
+
+
+
