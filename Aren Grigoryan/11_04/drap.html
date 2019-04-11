@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+<div style="background:red"; Id="click">
+<p id="ccc">Հայաստան</p>
+</div>
+
+
+<button onclick="f ()" id = "button">flag</button>
+
+<script>
+  function getRandom() {
+  return Math.floor(Math.random() * 6); 
+  }
+
+  function f () {
+  
+  switch(getRandom()){
+
+
+  case 1:
+  document.getElementById("click").style.backgroundColor="yellow";
+document.getElementById("button").innerHTML="yellow";
+document.getElementById("ccc").style.fontSize = "100px";
+  break;
+
+  case 2:
+  document.getElementById("click").style.backgroundColor="orange"
+document.getElementById("button").innerHTML="orange" 
+
+  break;
+
+  case 3:
+  document.getElementById("click").style.backgroundColor="green"
+ 
+document.getElementById("button").innerHTML="green"
+
+
+  break
+
+  case 4:
+  document.getElementById("click").style.backgroundColor="blue"
+document.getElementById("button").innerHTML="blue" 
+
+  break;
+
+ 
+
+  case 5:
+  document.getElementById("click").style.backgroundColor="lime"
+
+document.getElementById("button").innerHTML="lime"  
+break;
+  
+}
+  }
+</script>
+
+</body>
+</html>
+
