@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="dice.css">
+</head>
+
+<body >
+ <form >
+  <input type="number"  min="2" max="12" value="" Id="num"> 
+</form>
+  <div  align="center" Id="one"><p>one</p></div>
+  <div  align="center" Id="two"><p>two</p></div>
+  <button type = "button"; onclick="dice()"><p> Roll</p></button>
+   <div  align="center" Id="text" class="div"><p">Guess</p></div>
+<script>
+var one;
+var two;
+function dice(){
+var number1=Math.floor(Math.random() * 6);
+var number2=Math.floor(Math.random() * 6);
+
+switch (number1){
+
+case 1:
+ one = ".";
+ break; 
+case 2:
+ one = ":";
+ break;
+case 3:
+ one = ".:";
+ break;
+case 4:
+ one = "::";
+ break;
+case 5:
+ one = ":.:";
+ break;
+case 6:
+ one = ":::"; 
+ break; 
+}
+switch (number2){
+
+case 1:
+ two =  ".";
+ break; 
+case 2:
+ two = ":";
+ break;
+case 3:
+ two = ".:";
+ break;
+case 4:
+ two = "::";
+ break;
+case 5:
+ two = ":.:";
+ break;
+case 6:
+ two = ":::"; 
+ break; 
+}
+document.getElementById("one").innerHTML=one;
+document.getElementById("two").innerHTML=two;
+document.getElementById("num").value=num;
+
+if (num == number1+number2){
+document.getElementById("text").innerHTML="Very nice!";
+} else {
+document.getElementById("text").innerHTML="Try again!";
+}
+}
+</script>
+
+</body>
+</html>
