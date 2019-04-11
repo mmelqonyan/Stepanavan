@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+<div style="background:red"; Id="click">
+<h1>Հայաստան</h1>
+</div>
+
+
+<button style="background:green";type = "button"; onclick="func()";><h4>flag</h4> </button>
+
+<script>
+var i= 1;
+function func(){
+i++;
+if (i == 2){
+  document.getElementById("click").style.backgroundColor="blue"
+} else if (i == 3){
+  document.getElementById("click").style.backgroundColor="orange"
+} else{
+  document.getElementById("click").style.backgroundColor="red"
+  i = 1;
+}
+
+}
+
+
+</script>
+
+</body>
+</html>
+
