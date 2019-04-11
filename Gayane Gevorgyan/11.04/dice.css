@@ -33,3 +33,12 @@ background-position: center;
   font-size:15px;
   color:#e5ccb7;
 }
+form{
+  height: 30px;
+  width: 150px;
+  padding: 5px;
+  margin: 50px 24%;
+  background: #301207;  
+  font-size:15px;
+  color:#e5ccb7;
+}
