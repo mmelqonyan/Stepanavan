@@ -1,23 +1,18 @@
 .maindiv{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 100px;
+    width: 150px;
     margin: auto;
-    grid-column-gap: 5px;
-    border-style: solid;
+    
     margin-top: 25px;
     margin-bottom: 25px;
 }
 .zar1{
 height: 100px;
-
-margin-right: 90%;
 font-size: 500%;
 }
 .zar2{
     height: 100px;
-    
-    margin-right: 90%;
     font-size: 500%;
     }
 .button{
