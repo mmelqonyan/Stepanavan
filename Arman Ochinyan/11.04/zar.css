@@ -1,0 +1,31 @@
+
+body{
+	background-color: #33ff33;
+}
+.gen_div{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: 500px;
+	margin: auto;
+	grid-column-gap: 5px;
+}
+
+#div1{
+
+	text-align: center;
+	font-size: 200px;
+	height: 200px;
+	background-color: #80ffff;
+}
+#div2{
+	font-size: 200px;
+	height: 200px;
+	text-align: center;
+	background-color: #80ffff;
+}
+
+
+#demo{
+	color: #5d516a;
+	background-color: pink;
+}
