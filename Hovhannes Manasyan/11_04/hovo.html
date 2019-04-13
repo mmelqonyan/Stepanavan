@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Zar
+    </title>
+    <meta charset="utf-8">
+    
+</head>
+<body>
+    
+
+    <div id="diva" style="width: 100px;height: 100px;background-color: blue; font-size: 30px;text-align: center;" >0</div>
+    <div id="divb" style="width: 100px;height: 100px; background-color: red;font-size: 30px;text-align: center;">0</div>
+    <input type="button" value="Click me" onclick="change()">
+
+    <script >
+        function change() {
+        var a =  Math.floor(Math.random() * 6);
+        document.getElementById('diva').innerHTML = a+1;
+        var a =  Math.floor(Math.random() * 6);
+        document.getElementById('divb').innerHTML = a+1;
+    }
+    </script>
+
+
+</body>
+</html>

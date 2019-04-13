@@ -1,0 +1,44 @@
+div{
+  height: 60px;
+  width: 60px;
+  padding: 5px;
+  margin: 50px 27%;
+  background: #301207;
+  border-radius: 20px;  
+  font-size:50px;
+  color:#e5ccb7;
+}
+button{
+  height: 40px;
+  width: 100px;
+  margin-left: 26%;
+  background:#301207;
+  color: #e5ccb7;
+  border: 2px solid gray;
+  border-radius: 20px; 
+  font-size:15px; 
+
+}
+body{
+background-image: url("nardi.png");
+background-position: center; 
+}
+
+.div{
+  height: 30px;
+  width: 150px;
+  padding: 5px;
+  margin: 100px 24%;
+  background: #301207;  
+  font-size:15px;
+  color:#e5ccb7;
+}
+form{
+  height: 30px;
+  width: 150px;
+  padding: 5px;
+  margin: 50px 24%;
+  background: #301207;  
+  font-size:15px;
+  color:#e5ccb7;
+}
