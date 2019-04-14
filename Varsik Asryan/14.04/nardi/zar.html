@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet"  href="tocka.css">
+</head>
+
+
+<body  bgcolor="#E6E6FA">
+   <form>
+      Input number 2-12
+      <input type="number" size="30" min="2" max="12" value="" formsize="10" Id="num">
+  </form>
+
+  <div align = "center" Id="one"><p>one</p></div>
+  <br>
+  <div align = "center" Id="two"><p>two</p></div>
+  
+  <button type="button"; onclick="face()"><p>Throw</p></button>
+  <div  align="center" Id="text" class="try"><p">Try</p></div>
+
+<script>
+var one;
+var two;
+
+function face(){
+var zar1=Math.floor(Math.random() * 6);
+var zar2=Math.floor(Math.random() * 6);
+
+switch (zar1){
+case 1:
+ one = "&#8226";
+
+ break; 
+case 2:
+ one = "&#8226 &#8226";
+ break;
+case 3:
+ one = "&#8226 &#8226 &#8226";
+ break;
+case 4:
+ one = "&#8226 &#8226 &#8226 &#8226";
+ break;
+case 5:
+ one = "&#8226 &#8226 &#8226 &#8226 &#8226";
+ break;
+case 6:
+ one = "&#8226 &#8226 &#8226 &#8226 &#8226 &#8226"; 
+ break; 
+}
+switch (zar2){
+case 1:
+ two =  "&#8226";
+ break; 
+case 2:
+ two = "&#8226 &#8226";
+ break;
+case 3:
+ two = "&#8226 &#8226 &#8226";
+ break;
+case 4:
+ two = "&#8226 &#8226 &#8226 &#8226";
+ break;
+case 5:
+ two = "&#8226 &#8226 &#8226 &#8226 &#8226";
+ break;
+case 6:
+ two = "&#8226 &#8226 &#8226 &#8226 &#8226"; 
+ break; 
+}
+
+document.getElementById("one").innerHTML=one;
+document.getElementById("two").innerHTML=two;
+document.getElementById("num").value=num;
+if (num == one+two){
+document.getElementById("text").innerHTML="Cingratulation";
+} else {
+document.getElementById("text").innerHTML="Try again";
+}
+}
+</script>
+</body>
+
+     
+  
+
+</body>
+</html>

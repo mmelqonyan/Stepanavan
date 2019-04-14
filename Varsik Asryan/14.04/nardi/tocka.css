@@ -1,0 +1,42 @@
+div{
+    width:65px;
+    height:65px;
+    background:#0040ff;
+    font-size:50px
+    
+    margin:10px 50%
+    border:30px;
+    color:black;
+}
+
+form{
+  height: 30px;
+  width: 170;
+  padding: 10px;
+  margin: 50px 20%;
+  background: #0040ff;  
+  font-size:20px;
+  color:#e5ccb7;
+}
+
+button{
+  height: 60px;
+  width: 80px;
+  padding: 1px;
+  margin: 50px 20%;
+  background: #003366;  
+  font-size:20px;
+  color:#e5ccb7;
+}
+.try{
+  
+  height: 60px;
+  width: 100px;
+  padding: 1px;
+  margin: 50px 20%;
+  background: #003366;  
+  font-size:20px;
+  color:#e5ccb7;
+}
+
+  
