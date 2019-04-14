@@ -1,0 +1,49 @@
+body{
+	background-color: #b3ff99;
+	text-align: center;
+}
+#gen_div{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	margin: auto;
+	grid-gap: 1%;
+	margin: 20px;
+	
+}
+.rm_divs{
+	color: white;
+	font-size: 20px;
+	background-color: red;
+	text-align: center;
+	height: 50px;
+}
+#inp_id{
+	margin-top: 20px;
+}
+@media screen and (max-width: 900px) and (min-width: 600px) {
+	  body {
+	    background-color: lightblue;
+		text-align: center;
+	  }
+	  #gen_div{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+		margin: auto;
+		grid-gap: 1%;
+		
+	}
+}
+@media screen and (max-width: 600px) {
+  body {
+    background-color: green;
+    }
+	  #gen_div{
+		display: grid;
+		grid-template-columns: 1fr 1fr ;
+		margin: auto;
+		grid-gap: 1%;
+	}
+	#gen_div > input {
+		display: block;
+	}
+}

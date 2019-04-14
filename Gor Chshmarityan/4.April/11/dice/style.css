@@ -1,0 +1,22 @@
+.maindiv{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 150px;
+    margin: auto;
+    
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.zar1{
+height: 100px;
+font-size: 500%;
+}
+.zar2{
+    height: 100px;
+    font-size: 500%;
+    }
+.button{
+    height: 150px;
+    text-align: center;
+    margin-top: 50px;
+}
