@@ -24,7 +24,7 @@ function get_value() {
 	var login = document.getElementById('login').value;
 	
 	const user = arrdata.find(user => user.vlogin === login);
-	alert(user);
+	
 	if(user){
 		document.getElementById('span_id').innerHTML = "Enter Other login";	
 		return;
