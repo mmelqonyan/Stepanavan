@@ -1,0 +1,50 @@
+body{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-image: url(recources/face.png);
+  
+}
+.gen_div{
+  float: center;
+  padding: 20px;
+  background-color: #e6f0ff;
+  width: 60%;
+  box-shadow: 7px 20px 25px ;
+
+}
+.gen_div fieldset{
+  color: #66a3ff;
+  font-size: 20px;
+}
+
+#span_id{
+  margin-right: 25px;
+  width: 30%;
+  float: right;
+  background-color:  #b3d1ff;
+  word-wrap: break-word;
+  color: coral;
+  margin: 20px;
+}
+#falf1{
+  text-align: right;
+  width: 60%;
+  display: inline-block;
+  color: coral;
+}
+
+@media screen and (max-width: 740px) {
+  
+.gen_div{
+    width: 100%;
+    margin: 0 auto;
+  }
+  #falf1{
+    width: 99%;
+  }
+#span_id{
+  float: left;
+  width: 50%;
+}
+}
