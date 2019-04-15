@@ -11,7 +11,7 @@ function get_value() {
 		document.getElementById('span_id').innerHTML = "Enter correct name";
 		return;
 	}
-	data.vname = name;
+	
 
 	var surname = document.getElementById('surname').value;
 	
@@ -19,11 +19,12 @@ function get_value() {
 		document.getElementById('span_id').innerHTML = "Enter correct surname"
 		return;
 	}
-	data.vsurname = surname;
+	
 	
 	var login = document.getElementById('login').value;
 	
 	const user = arrdata.find(user => user.vlogin === login);
+	alert(user);
 	if(user){
 		document.getElementById('span_id').innerHTML = "Enter Other login";	
 		return;
@@ -33,8 +34,6 @@ function get_value() {
 		document.getElementById('span_id').innerHTML = "Enter correct login";
 		return;
 	}
-	data.vlogin = login;
-	
 	var password = document.getElementById('password').value;
 	if((!password) || password.length < 5){
 		document.getElementById('span_id').innerHTML = "Enter correct password";
@@ -50,9 +49,7 @@ function get_value() {
 		document.getElementById('span_id').innerHTML = "Password and name is same as: Try New";
 		return;
 	}
-
-	data.vpassword = password;
-
+	
 
 	document.getElementById('name').value = "";
 	document.getElementById('surname').value = "";
@@ -61,6 +58,6 @@ function get_value() {
 	document.getElementById('confirm').value = "";
 	
 	document.getElementById('span_id').innerHTML = "Congratulations you create your account";
-	arrdata.push(data);
+	arrdata.push({vname : name, vsurname :surname, vlogin : login, vpassword :password});
 	console.log(arrdata);
 }
