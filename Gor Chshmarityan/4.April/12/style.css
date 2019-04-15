@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    flex-wrap: nowrap;
+
+}
+.overlay {
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    border: 1px solid violet;
+    display: flex;
+    color: black;
+    justify-content: center;
+}
+
+.input{
+height: 50px;
+margin-top: 50px;
+}
+
+.button{
+    height: 55px;
+    margin-top: 50px;
+    
+    }
