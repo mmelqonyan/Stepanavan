@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Registration
+        </title>
+<meta charset="utf-8">
+    </head>
+<body>
+
+
+  
+<p>  Surname: <input type="text" id="surname"></p>
+  <p>Name: <input type="text" id="name"></p>
+  <p>Login: <input type="text" id="login"></p>
+ <p> Password: <input type="text" id="pass"></p>
+<button onclick="typing()">Confirm</button>
+<script>
+
+var datas=[]
+
+function typing(){
+
+var data={}
+   var surname = document.getElementById("surname").value;
+    var name = document.getElementById("name").value;
+    var login = document.getElementById("login").value;
+    var password = document.getElementById("pass").value;
+    data["Surname"] = surname;
+    data["Name"] = name;
+    data["Login"] = login;
+    data["Pass"] = password;
+    datas.push(data)
+console.log(datas)
+}
+
+
+    
+
+
+</script>
+
+</body>
+</html>
+
