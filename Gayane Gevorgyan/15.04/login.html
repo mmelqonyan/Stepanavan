@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="log.css">
+</head>
+
+<body>
+<div><h2>Welcome my page</h2> </div>
+<form name="reg">
+  <fieldset>
+    <legend>Registration:</legend>
+    Login:   
+    <input type="text" id="login"><br><br>
+    Password:
+    <input type="text" id="password"><br><br>
+    Name:
+    <input type="text" id="name"><br><br>
+    Surename:
+    <input type="text" id="surename"><br><br>
+    <button onclick="regForm()" class="submit">Submit</button>
+  </fieldset>
+</form>
+
+<script>
+function regForm() {
+  var blank = [];
+  let logg = document.getElementById("login").value;
+  let pas = document.getElementById("password").value;
+  let name = document.getElementById("name").value;
+  let sname = document.getElementById("surename").value;
+  
+  if (logg !== ""){
+     blank.push(logg);
+  }else{
+     alert("Input login");
+  }
+  if (pas !== "") {
+      blank.push(pas);
+  }else{
+     alert("Input Password");
+  }
+  if (name !== "") {
+     blank.push(name);
+  }else{
+     alert("Input Name");
+  }
+  if (sname !== ""){
+    blank.push(Surename);
+    }else{
+    alert("Input Surename");
+   }
+}
+</script>
+
+</body>
+</html>
