@@ -6,8 +6,10 @@ function create_table() {
     var promp1 = document.getElementById("first").value;
     var promp2 = document.getElementById("second").value;
 
-    if(!promp1 || !promp2){
-        document.getElementById('pmassege').innerHTML = "Enter number";
+    if(!promp1 || !promp2 || promp1 > 20 || promp1 < 1 || promp2 > 20 ||promp2 < 1){
+        document.getElementById('pmassege').innerHTML = "Enter correct number(1-20)";
+        document.getElementById("first").value = "";
+        document.getElementById("second").value = "";
         return;
     }  
     var mytable = document.querySelectorAll("table");
@@ -16,7 +18,7 @@ function create_table() {
     }
     
     var table1 = document.createElement("table");
-    var tbody1 = document.createElement("tbody");
+
 
     for(let i = 0; i < promp1;i++){
         var tr1 = document.createElement("tr");
@@ -36,14 +38,14 @@ function create_table() {
                     
                 }
             }
-        tbody1.appendChild(tr1);
+        table1.appendChild(tr1);
     }
     
-    table1.appendChild(tbody1);
+    
     body1.appendChild(table1);
     table1.setAttribute("border", "2");
-    table1.setAttribute("style","background-color:blue");
-    
+    table1.setAttribute("style","background-color:blue;margin: 0 auto");
+   
     document.getElementById("first").value = "";
     document.getElementById("second").value = "";
     document.getElementById('pmassege').innerHTML = "";
