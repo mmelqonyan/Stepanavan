@@ -1,0 +1,14 @@
+td {
+    border: 3px solid orange;
+    min-height: 30px;
+    min-width: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+}
+
+#error{
+    border: 2px solid tomato;
+    padding: 0px 7px 2px 8px;
+    margin: 0px 8px 5px 11px;
+}
