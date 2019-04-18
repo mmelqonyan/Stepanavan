@@ -1,0 +1,62 @@
+body{
+    box-sizing: border-box;
+}
+#display {
+    background-color: black;
+    color:rgba(255,255,255,.8) ; !important;
+    height: 100px;
+    width: 250px;
+    font-size: 50px;
+    text-align: right;
+    border:0;
+    outline: black;
+    opacity: 0.8;
+}
+
+#o {
+    background-color: black;
+    color:rgba(255,255,255,.8) ; !important;
+    height: 100px;
+    width: 50px;
+    font-size: 20px;
+    text-align: right;
+    border:0;
+    outline: black;
+    opacity: 0.8;
+}
+
+ *:focus {
+    outline: black;
+}
+#wrapper{
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.buttons {
+    opacity: 0.8;
+    transition: all ease 700ms;
+    height: 75px;
+    width: 75px;
+    background-color: black;
+    color:rgba(250,250,250,.7) ;
+    cursor: pointer;
+    font-size: 30px;
+    border:1px solid ;
+    border-color: rgba(200,200,200,.3) ;
+}
+
+#result {
+    height: 150px;
+    background-color: aquamarine;
+    position: relative;
+    top:-75px !important;
+}
+
+#result:hover {
+    background-color:darkmagenta;
+}
+#zero{
+    width: 150px;
+}
