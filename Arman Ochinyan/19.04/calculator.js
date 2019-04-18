@@ -15,7 +15,7 @@ function get_value(arg) {
 		return;
 	}
 	
-	beginning:disp += value;
+	disp += value;
 	
 	document.getElementById('display').value = disp;
 	if(disp[disp.length-1] == '='){
