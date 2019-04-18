@@ -1,0 +1,31 @@
+#gen_id{
+  display: flex;
+  justify-content: center;
+  
+}
+#pmassege{
+    color: #a5ce2f;
+    font-size: 30px;
+   
+}
+.inputs{
+    width: 100px;
+ 
+}
+td{
+	text-align: center;
+	width: 50px;
+	height: 50px;
+}
+table:hover{
+	animation-name: example;
+  	animation-duration: 5s;
+}
+@keyframes example {
+  from {background-color: blue;}
+  to {background-color: yellow;}
+  from {width: 150px;}
+  to {width: 200px;}
+  from {height : 150px;}
+  to {height:  200px;}
+}
