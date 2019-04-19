@@ -67,6 +67,7 @@ Array.prototype.random = function () {
                                 clearInterval(hide);
                                 document.getElementById('pmassege').innerHTML = "You have 3 chances";
                                 k = 3;
+                                location.reload();
                                 return;
                             }
                         }, 20);
