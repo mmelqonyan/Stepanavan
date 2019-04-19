@@ -1,0 +1,31 @@
+
+#pmassege{
+    color: #a5ce2f;
+    background-color: red;
+   font-size: 50px;
+   
+}
+table{
+  margin: 0 auto;
+  background-color:#c6ffb3;
+
+}
+td{
+	text-align: center;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+}
+td:hover{
+	animation-name: example;
+  	animation-duration: 2s;
+}
+
+@keyframes example {
+  from {color:#ff1a1a ;}
+  to {color: blue ;}
+  
+}
+#pmassege{
+  text-align: center;
+}
