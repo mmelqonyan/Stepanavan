@@ -31,24 +31,40 @@ function check() {
 
 		if (array[i][0] == array[i][1] && array[i][0] == array[i][2] && array[i][0] != "*") {
 			document.getElementById("span").innerHTML = `Congratulations ${array[i][0]}`
+			button()
 		}
 		else if (array[0][i] == array[1][i] && array[0][i] == array[2][i] && array[0][i] != "*") {
 			document.getElementById("span").innerHTML = `Congratulations ${array[0][i]}`
+		
+			button()
 		}
 	}
 
 	if (array[0][0] == array[1][1] && array[0][0] == array[2][2] && array[0][0] != "*") {
 		document.getElementById("span").innerHTML = `Congratulations ${array[1][1]}`
+		button()
 	}
 	else if (array[0][2] == array[1][1] && array[1][1] == array[2][0] && array[1][1] != "*") {
 		document.getElementById("span").innerHTML = `Congratulations ${array[1][1]}`
+		button()
 	}
 	if (count == 9) {
 		document.getElementById("span").innerHTML = `Nobody WIN`
 	}
 }
 
+function button(){
+	let tags = document.getElementsByTagName("button");
+	for(let i = 0; i < tags.length; i++){
+		tags[i].setAttribute("disabled","true")
+	
+	
+	}
+	
+	
 
+
+}
 
 
 
