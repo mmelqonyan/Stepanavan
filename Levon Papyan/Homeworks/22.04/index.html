@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+
+        #main{
+            border: 1px solid;
+            height: 70px;
+            width: 300px;
+            line-height: 70px;
+            margin: 20px;
+            padding-left: 30px
+
+        }
+        #p{
+            margin: 25px;
+        }
+    
+    </style>
+</head>
+<body>
+    <p id="p">DIV CREATER</p>
+    <div id="main">
+        <button onclick="createDiv()">Click</button>
+        <input  type="text" id="input" placeholder="Dimensions for the div tag" >
+
+    </div> 
+
+<script>
+    
+    
+    
+    function createDiv(){
+        let input = document.getElementById("input").value;
+        let div = document.createElement("div");
+        div.setAttribute("style",`${input}`);
+        document.body.appendChild(div);
+        }
+
+
+</script>
+</body>
+</html>
