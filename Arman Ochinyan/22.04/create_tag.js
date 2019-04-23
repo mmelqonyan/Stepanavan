@@ -25,16 +25,22 @@ var obj = {
 		tag.innerHTML = arr[0];
 		tag.style.border ='1px solid black';
 
-		if(arr[1] && (arr[1].split("=")[0] == 'w' || arr[1].split("=")[0] == 'width')) {
+		if(!(arr[2]) && (arr[1].split("=")[0] == 'w' || arr[1].split("=")[0] == 'width')) {
+			
 			tag.style.width = arr[1].split("=")[1]+'px';
 			
-		}else if(arr[2] && (arr[2].split("=")[0] == 'w' || arr[2].split("=")[0] == 'width')){
-			tag.style.width = arr[2].split("=")[1]+'px';
-		}else if(arr[1] && (arr[1].split("=")[0] == 'h' || arr[1].split("=")[0] == 'height')) {
+		}
+		else if(!(arr[2]) && (arr[1].split("=")[0] == 'h' || arr[1].split("=")[0] == 'height')) {
 			tag.style.height = arr[1].split("=")[1]+'px';
 			
-		}else if(arr[2] && (arr[2].split("=")[0] == 'h' || arr[2].split("=")[0] == 'height')){
+		}
+		else if((arr[2].split("=")[0] == 'w' || arr[2].split("=")[0] == 'width')){
+			tag.style.width = arr[2].split("=")[1]+'px';
+			tag.style.height = arr[1].split("=")[1]+'px';
+		}
+		else if( (arr[2].split("=")[0] == 'h' || arr[2].split("=")[0] == 'height')){
 			tag.style.height = arr[2].split("=")[1]+'px';
+			tag.style.width = arr[1].split("=")[1]+'px';
 		}
 		
 
