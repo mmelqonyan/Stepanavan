@@ -92,11 +92,18 @@
 	color: white;
 }
 .newsshow > div,h2{
-	width: 180px;
+	
 	word-wrap: break-word;
 	margin-left: 20px;
 }
-
+.newsshow > div> a:hover{
+	
+	color: red;
+}
+.newsshow2 > div> a:hover{
+	
+	color: red;
+}
 .newsshow {
 
     height: 920px;
@@ -130,6 +137,10 @@
 }
 .genphoto > img{
 	width: 100%;
+}
+.genphoto > img:hover{
+	box-shadow: 2px 5px 5px 7px rgba(124,52,258,0.8);
+	box-shadow: 1px 5px 5px 7px rgb(124,147,125)
 }
 .genphoto > p{
 	font-size: 20px;
