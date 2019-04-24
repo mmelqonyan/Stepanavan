@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="div">
+        <button id="" onclick="getData()">Get Data</button>
+        <div>Gender: <span id="sex"></span></div>
+        <div>Title: <span id="name"><span></div>
+        <div>Name: <span id="first"></span></div>
+        <div>Last: <sapn id="last"></sapn>
+        </div>
+        <div>Age: <span id="age"></span></div>
+        <div>Email: <span id="email"></span></div>
+    </div>
+
+    <script>
+        function getData() {
+            $.ajax({
+                url: 'https://randomuser.me/api/',
+                dataType: 'json',
+                success: function (data) {
+                    console.log(data.results[0].gender);
+                    let ser = data.results[0].gender;
+                    document.getElementById("sex").innerHTML = ser;
+                    let title = data.results[0].name.title;
+                    let first = data.results[0].name.first;
+                    let last = data.results[0].name.last;
+                    let age = data.results[0].dob.age;
+                    document.getElementById("age").innerHTML = age;
+                    document.getElementById("name").innerHTML = title;
+                    document.getElementById("first").innerHTML = first;
+                    document.getElementById("last").innerHTML = last;
+                    let email = data.results[0].email;
+                    document.getElementById("email").innerHTML = email;
+
+                }
+            });
+        }
+
+    </script>
+</body>
+
+</html>
