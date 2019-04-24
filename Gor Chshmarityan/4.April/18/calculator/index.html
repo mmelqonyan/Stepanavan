@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js" defer></script>
+  <title>
+    Calculator
+  </title>
+</head>
+
+<body>
+    <div class="mycalc">
+        <form name="calculator" id="calculator">
+            <input type="text" name="inputwindow" id="inputwindow">
+            <div>
+                <input type="button"  value="1" onclick="takeValue(this.value)">
+                <input type="button"  value="2" onclick="takeValue(this.value)">
+                <input type="button"  value="3" onclick="takeValue(this.value)">
+                <input type="button" id="plus" value="+" onclick="takeValue(this.value)">
+            </div>
+            <div>
+                <input type="button"  value="4" onclick="takeValue(this.value)">
+                <input type="button"  value="5" onclick="takeValue(this.value)">
+                <input type="button"  value="6" onclick="takeValue(this.value)">
+                <input type="button" id="minus" value="-" onclick="takeValue(this.value)">
+            </div>
+            <div>
+                <input type="button"  value="7" onclick="takeValue(this.value)">
+                <input type="button"  value="8" onclick="takeValue(this.value)">
+                <input type="button"  value="9" onclick="takeValue(this.value)">
+                <input type="button" id="by" value="*" onclick="takeValue(this.value)">
+            </div>
+            <div>
+                <input type="button"  value="0" onclick="takeValue(this.value)">
+                <input type="button" id="decimal" value="." onclick="takeValue(this.value)">
+                <input type="button" id="devide" value="/" onclick="takeValue(this.value)">
+                <input type="button" id="percent" value="%" onclick="takeValue(this.value)">	
+            </div>
+            <div class="results">
+                <input type="button" id="equal" value="=" onclick="calculateResult()">
+                <button type="button" id="clear" value="" onclick="clearInput(document.getElementById('clear').value)">Clear</button>
+            </div>
+    
+        </form>	
+        </div>
+</body>
+
+</html>

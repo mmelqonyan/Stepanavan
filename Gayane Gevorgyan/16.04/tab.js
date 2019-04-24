@@ -1,21 +1,20 @@
 function create(){
-  var body = document.getElementsByTagName("body")[0];
-  var rows = document.getElementsByTagName("row").value;
-  var columns = document.getElementsByTagName("column").value;
 
-  var table= document.createElement("table");
+    var rows = document.getElementById("row").value;
+    var columns = document.getElementById("column").value;
 
-  for (var r = 0; r < rows; r++){
-	var trs = document.createElement("tr");	
+    document.getElementById("tableContainer");
 
-   for (var c = 0; c < columns; c++){
-	var tds = document.createElement("td");	
-	var text= document.createTextNode("");
-	tds.appendChild(text);
-	trs.appendChild(tds);
-}
-	table.appendChild(trs);
-}
-	
-	body.appendChild(table);	
+    var table = "<table border='1'>";
+   
+    for (var r = 0; r < rows; r++) {
+        table += "<tr>";
+        for (var c = 0; c < columns; c++) {
+            table += "<td></td>";
+        }
+        table += "</tr>";
+    }
+    table += "</table>";
+
+    document.getElementById("tableContainer").innerHTML = table;
 }

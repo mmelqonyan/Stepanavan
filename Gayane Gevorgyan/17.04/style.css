@@ -1,0 +1,35 @@
+
+#btt{
+width: 100px;
+height:20px;
+margin-bottom: 20px;
+font-size:15px;
+}
+tr {
+    height: 50px;
+    background-color: #7ec0c4;   
+}
+td {
+    width: 50px; 
+}
+button {
+    width: 60px;
+    height: 60px;
+font-size:30px;
+color:#0e3e47;
+}
+ button:hover {
+        background-color: #aebfc3;
+    }
+table {  
+    border: 2px solid black;
+}
+.txt {
+    margin-top: 20px;
+    font-size: 20px;
+    color:#0e3e47;
+    height: 30px;
+    width: 150px;
+    background-color: #7ec0c4;
+}
+

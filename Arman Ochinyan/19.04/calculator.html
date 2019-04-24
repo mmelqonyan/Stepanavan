@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<link rel="stylesheet" href="calculator.css" media="screen" />
+  <script src="calculator.js"></script>
+</head>
+<body>
+
+
+<div class="grid-container" name="calculator" >
+  
+      <input type="text" class="iteminp" id="display" name="display" >
+
+  
+  <button  class ="item" value = '*' id="mul" onclick="get_value(this)">*</button>
+  <button  class ="item1" value = 1 onclick='display.value += 1'>1</button>
+  <button  class ="item2" value = 2 onclick='display.value += 2'>2</button>  
+  <button  class ="item3" value = 3 onclick='display.value += 3'>3</button>
+  <button class ="item4" value = 4 onclick='display.value += 4'>4</button>
+  <button  class ="item5" value = 5 onclick='display.value += 5'>5</button>
+  <button  class ="itemdiv" value = '/' id="div" onclick="get_value(this)">/</button>
+  <button  class ="item6" value = 6 onclick='display.value += 6'>6</button>  
+  <button  class ="item7" value = 7 onclick='display.value += 7'>7</button>
+  <button  class ="item8" value = 8 onclick='display.value += 8'>8</button>
+  <button  class ="item9" value = 9 onclick='display.value += 9'>9</button>
+  <button  class ="itemsum" value = '+' id="sum" onclick="get_value(this)">+</button>
+  <button  class ="item0" value = 0 onclick='display.value += 0'>0</button>
+  <button  class ="itemmin" value = '-'; id="min" onclick="get_value(this)">-</button>
+  <button  class ="itemeq" value = '=' id="check" onclick="get_value(this)">=</button>
+  <button  onclick="display.value = '' ">C</button>
+  <button  onclick="display.value = display.value.substr(0, display.value.length-1) "> << </button>
+</div>

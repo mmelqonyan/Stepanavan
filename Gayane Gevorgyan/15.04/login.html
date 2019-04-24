@@ -1,58 +1,58 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-<title>Registration</title>
-<meta charset="utf-8">
-<link rel="stylesheet" href="log.css">
+    <title>Registration</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="log.css">
+    <script src="log.js"></script>
 </head>
 
 <body>
-<div><h2>Welcome my page</h2> </div>
-<form name="reg">
-  <fieldset>
-    <legend>Registration:</legend>
-    Login:   
-    <input type="text" id="login"><br><br>
-    Password:
-    <input type="text" id="password"><br><br>
-    Name:
-    <input type="text" id="name"><br><br>
-    Surename:
-    <input type="text" id="surename"><br><br>
-    <button onclick="regForm()" class="submit">Submit</button>
-  </fieldset>
-</form>
+    <div><h2>Welcome to my page</h2> </div>
+    <div id="msgContainer"></div>
+        <fieldset>
+            <legend>Registration:</legend>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="login">Login:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="login">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Password">Password:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="password">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Name">Name:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="surename"> Surename:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="surename">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button onclick="regForm()" class="submit">Submit</button>
+        </fieldset>
 
-<script>
-function regForm() {
-  var blank = [];
-  let logg = document.getElementById("login").value;
-  let pas = document.getElementById("password").value;
-  let name = document.getElementById("name").value;
-  let sname = document.getElementById("surename").value;
-  
-  if (logg !== ""){
-     blank.push(logg);
-  }else{
-     alert("Input login");
-  }
-  if (pas !== "") {
-      blank.push(pas);
-  }else{
-     alert("Input Password");
-  }
-  if (name !== "") {
-     blank.push(name);
-  }else{
-     alert("Input Name");
-  }
-  if (sname !== ""){
-    blank.push(Surename);
-    }else{
-    alert("Input Surename");
-   }
-}
-</script>
+    <div id="personContainer">
+    </div>
 
 </body>
 </html>
