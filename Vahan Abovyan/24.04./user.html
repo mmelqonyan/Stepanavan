@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<button onclick="mm()">nnn</button>
+<input type="range">
+
+
+
+<script>
+
+
+function mm(){
+$.ajax({
+ url: 'https://randomuser.me/api/',
+ locationType: 'json',
+ success: function(city) {
+   console.log(city);
+ }
+});
+}
+
+function zz(){
+$.ajax({
+ url: 'https://randomuser.me/api/',
+ emailType: 'json',
+ success: function(password) {
+   console.log(password);
+ }
+});
+}
+function vv(){
+$.ajax({
+ url: 'https://randomuser.me/api/',
+ nameType: 'json',
+ success: function(title) {
+   console.log(title);
+ }
+});
+}
+
+</script>
+</body>
+</html>
