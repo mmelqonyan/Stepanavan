@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Childe Node
+	</title>
+
+
+	<style>
+		body {
+		  color: coral;
+		}
+	</style>
+</head>
+
+<body>
+<div id="dd">
+
+<h1 id="id01"></h1>
+<p id="demo"></p>
+
+	<div>
+		
+		<pre id="id01"><a href=""></a></pre>
+		<p id="demo">
+			
+			<h3>
+				<header></header>
+			</h3>
+			
+		</p>
+			<div>
+				<div>
+					<div>
+						<div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+
+</div>
+
+<sup></sup>
+
+<script>
+
+
+const getTree = (node, level = 0) =>
+
+  Array.prototype.reduce.call(node, (array, item) => {
+
+    array = [...array, `${'.\t'.repeat(level*4)}<'${item.tagName}'>`];
+    (item.children.length && (array = [...array, ...(getTree(item.children, level + 1))]));
+    
+    return array;
+  }, []);
+
+var array = getTree(document.querySelectorAll('html'));
+
+for (var i = 0; i < array.length; i++) {
+
+	document.getElementById("demo").innerHTML += array[i]+'<br>';
+}
+
+
+</script>
+
+</body>
+</html>
