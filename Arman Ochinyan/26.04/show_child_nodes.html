@@ -11,6 +11,7 @@
 		  color: coral;
 		}
 	</style>
+	
 </head>
 
 <body>
@@ -22,7 +23,7 @@
 	<div>
 		
 		<pre id="id01"><a href=""></a></pre>
-		<p id="demo">
+		
 			
 			<h3>
 				<header></header>
@@ -44,28 +45,39 @@
 
 <sup></sup>
 
-<script>
 
+<script >
+	
+	const getTree = (node, level = 0) =>
 
-const getTree = (node, level = 0) =>
+    Array.prototype.reduce.call(node, (array, item) => {
 
-  Array.prototype.reduce.call(node, (array, item) => {
-
-    array = [...array, `${'.\t'.repeat(level*4)}<'${item.tagName}'>`];
-    (item.children.length && (array = [...array, ...(getTree(item.children, level + 1))]));
+    array = [...array, level,`${item.nodeName}`,...(getTree(item.children, level + 1))];
+    
     
     return array;
   }, []);
 
-var array = getTree(document.querySelectorAll('html'));
+var p = document.getElementById('demo');
+function show() {
+    var arr = getTree(document.querySelectorAll('html'));
 
-for (var i = 0; i < array.length; i++) {
+    for (var i = 0; i < arr.length; i++) {
+       
+       if(!isNaN(arr[i])){
+            
+            p.innerHTML +=  ('<br>'+'_\t'.repeat(+arr[i]*4) );
 
-	document.getElementById("demo").innerHTML += array[i]+'<br>';
+       }else{
+            var btn = document.createElement('input');
+            btn.setAttribute("type",'button');
+            btn.setAttribute("value",`${arr[i]}`);
+            p.appendChild(btn);
+       }
+    }
 }
 
-//http://qaru.site/questions/17107926/is-there-a-way-to-print-closing-elements-in-a-dom-traversal-using-jquery
+show();
 </script>
-
 </body>
 </html>
