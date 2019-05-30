@@ -7,7 +7,7 @@ function ch_zar(){
 	check(a + b + 2);
 }
 
-function check(arg) {
+function check(arg) {    
 	
   	var count = prompt("Please enter number ");
 	if ( isNaN(count) || (!count) || count > 12 || count < 2){
@@ -21,7 +21,6 @@ function check(arg) {
   		document.getElementById('demo').innerHTML = "Your entred number "+count+" < "+ arg;;
   	}else{
   		document.getElementById('demo').innerHTML = "You win "+count+" == "+ arg;;
-  	}
-  		
+  	}	
 	
 }
