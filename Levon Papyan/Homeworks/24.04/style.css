@@ -1,0 +1,25 @@
+#div{
+    border:solid 10px rgb(138, 138, 231);
+    background-color: rgb(193, 243, 243);
+    width: 280px;
+    padding: 20px;
+    border-radius: 10px;
+}
+ #sex {
+    font-style: italic;
+ }
+ #name {
+    font-style: italic;
+ }
+#first{
+    font-style: italic;
+}
+#last{
+    font-style: italic;
+}
+#age{
+    font-style: italic;
+}
+#email{
+    font-style: italic;
+}

@@ -1,0 +1,11 @@
+table, tr, td {
+    border:solid;
+    padding: 10px;
+}
+div{
+    border: solid;
+}
+img{
+    width: 100px;
+    height: 100px;
+}
