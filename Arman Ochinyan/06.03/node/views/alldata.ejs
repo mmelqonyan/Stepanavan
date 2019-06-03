@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style >
+		li{
+			color: green;
+		}
+	</style>
+</head>
+<body>
+
+	<ol>
+		<% body.forEach(function(items){ %>
+		<% if (items.name) { %>
+
+		<li> Name : <%= items.name    %>     </li>
+		<li> Email : <%= items.email    %>     </li>
+		<li> Comment : <%= items.comment    %>     </li>
+		<br>
+
+	   <% } }) %>
+	</ol>
+
+</body>
+</html>
