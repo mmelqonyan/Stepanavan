@@ -4,32 +4,11 @@ var bodyParser = require('body-parser');
 var mongodb = require('mongodb');
 
 // Nodejs encryption with CTR
+/////////////////////////////////////////////////
 const crypto = require('crypto');
 const algorithm = 'aes-256-cbc';
 const key = crypto.randomBytes(32);
 const iv = crypto.randomBytes(16);
-
-// function encrypt(text) {
-//  let cipher = crypto.createCipheriv('aes-256-cbc', Buffer.from(key), iv);
-//  let encrypted = cipher.update(text);
-//  encrypted = Buffer.concat([encrypted, cipher.final()]);
-//  return { iv: iv.toString('hex'), encryptedData: encrypted.toString('hex') };
-// }
-
-// function decrypt(text) {
-//  let iv = Buffer.from(text.iv, 'hex');
-//  let encryptedText = Buffer.from(text.encryptedData, 'hex');
-//  let decipher = crypto.createDecipheriv('aes-256-cbc', Buffer.from(key), iv);
-//  let decrypted = decipher.update(encryptedText);
-//  decrypted = Buffer.concat([decrypted, decipher.final()]);
-//  return decrypted.toString();
-// }
-
- //var hw = encrypt("Some serious stuff")
- //console.log(hw)
- //console.log(decrypt(hw))
-
- 
 
 
 function encrypt(pt){
@@ -46,7 +25,7 @@ function decrypt(theCipher) {
 	var s = decrypt.update(theCipher, 'base64', 'utf8');
 	return (s + decrypt.final('utf8'));
 }
-//console.log(decrypt(encrypt(pt)))
+
 /////////////////////////////////////////////////
 
 var dbConn = mongodb.MongoClient.connect('mongodb://localhost:27017/mydb');
@@ -61,22 +40,24 @@ app.use(express.static(path.resolve(__dirname, 'public')));
 
 app.post('/post-feedback', function (req, res) {
      
-   
+    
+	res.setHeader('Content-Type', 'text/html');
     dbConn.then(function(db) {
-        db.collection('feed').find({}).toArray().then(function(feed) { 
-
-            for (var i = 0; i < feed.length; i++) {
-            	
-           		if (decrypt(feed[i].pass) == req.body.pass) {
-            	 	res.send("Password alredy Exists,Try New") 
+        db.collection('feed').find({'email' : req.body.email },{_id : 0,email : 1}).toArray().then(function(feed) { 
+                  	
+           		if (feed[0]) {
+           			
+           			if(feed[0].email == req.body.email){
+	           			
+	            	 	res.send('<html><body><h3> This Email: <i>'+req.body.email+ '</i> allredy exists:Try new</h3></body></html>') 
+	            	 	return;
+	            	}
             	}
-            }   
-
-            var passw = encrypt(req.body.pass);
-				
+	
 			delete req.body._id; // for safety reasons
-			db.collection('feed').insertOne({name:req.body.name,pass:passw});
-			res.render('news',{body: {name:req.body.name,pass:passw}}) ;
+			var password = encrypt(req.body.pass);
+			db.collection('feed').insertOne( { email:req.body.email, pass:password } );
+			res.render('news', { body: { email:req.body.email, pass:password } } ) ;
 				  
 
     	}).catch(function(e) {
@@ -88,10 +69,6 @@ app.post('/post-feedback', function (req, res) {
     		console.log(e)
     })
 
-    
-    
-
-    //send( '<html><body><h3>'+req.body.name+'</h3><h3>'+req.body.email+'</h3><h3>'+req.body.comment+'</h3></body></html>');
 });
 
 app.get('/view-feedbacks',  function(req, res) {
@@ -99,8 +76,7 @@ app.get('/view-feedbacks',  function(req, res) {
         db.collection('feed').find({}).toArray().then(function(feed) {       
             		
             res.render('alldata',{body: feed}) 
-            	
-                    
+            	               
         });
     });
 

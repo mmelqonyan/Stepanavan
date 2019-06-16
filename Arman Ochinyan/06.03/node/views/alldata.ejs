@@ -5,6 +5,7 @@
 	<style >
 		li{
 			color: green;
+			border:1px solid black;
 		}
 	</style>
 </head>
@@ -12,9 +13,9 @@
 
 	<ol>
 		<% body.forEach(function(items){ %>
-		<% if (items.name) { %>
-		<li> Name : <%= items.name    %>     </li>
-		<li> pass : <%= items.pass    %>     </li>
+		<% if (items.email) { %>
+		<li> Email : <%= items.email    %> <br> Pass : <%= items.pass  %> </li>
+		     
 		
 		<br>
 	   <% } }) %>

@@ -3,11 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <title>Client Data</title>
+    <style >
+        input{
+            display: block;
+            margin-bottom:10px;
+        }
+    </style>
+    <script src="react/api.js"></script>
+    <script src="react/dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 </head>
 <body>
+<h1>Facebook</h1>
+    <div id='root'></div>
 
-    <h1>Please fill data in the form below:</h1>
-    <form method="POST" action="/post-feedback">
+
+    <script type="text/babel">
+
+class SendMongo extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: '',pass: ''};
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleChange1 = this.handleChange1.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+  handleChange1(event) {
+    this.setState({pass: event.target.value});
+  }
+  
+
+  render() {
+    return (
+        <form  action="/post-feedback" method="POST">
+            <label>
+                Name:
+                <input type="email" value={this.state.value} placeholder="Email" name="email" onChange={this.handleChange} required />
+            </label>
+            <label>
+                Password:
+                <input type="password" value={this.state.pass} placeholder="Password" name="pass" onChange={this.handleChange1} required />
+            </label>
+            <input type="submit" value="Submit" />
+            <a href="/view-feedbacks">View feedbacks</a>
+        </form>
+    );
+  }
+}
+
+        ReactDOM.render(
+            <SendMongo />,
+            document.getElementById('root')
+        );
+
+    
+    </script>
+
+
+</body>
+</html>
+<!-- 
+
+<form method="POST" action="/post-feedback">
 
         <label>Name:<input type="text" name="name" required></label>
         <br>
@@ -25,7 +86,21 @@
 
     <a href="/view-feedbacks">View feedbacks</a>
 
+ -->
 
 
-</body>
-</html>
+ <!-- 
+
+React.createElement('form', {method:'POST', href : "/post-feedback"},
+                    React.createElement('h1',{},'Please fill data in the form below:'),
+                    React.createElement('lebel',{},'Name:',
+React.createElement('input', {type : "text", name  : "name",onChange:{this.handleChange},value:{this.state.value} , required : 1})),
+
+                    React.createElement('lebel', {},'Pass:',
+React.createElement('input', {type : "password", name  : "pass",onChange : {this.handleChange},value:{this.state.value}, required : 1})),
+
+                    React.createElement('input', {type:'button',value : "Submit"}),
+                    React.createElement('a', {href:'/view-feedbacks'},'View feedbacks')
+                );
+
+  -->
