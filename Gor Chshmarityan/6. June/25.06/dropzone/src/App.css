@@ -1,0 +1,12 @@
+p{
+border:solid;
+height: 200px;
+margin-left: 150px;
+margin-right: 150px;
+text-align: center;
+background-color: gray;
+
+}
+p:hover{
+  color: red;
+}
