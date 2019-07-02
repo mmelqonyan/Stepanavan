@@ -1,0 +1,24 @@
+<script>
+
+function a(){
+	console.log(1);
+	
+	function b(){
+		console.log(2);
+		
+		function c(){
+			console.log(3);
+			
+		}
+		setTimeout(c,1000);
+	}
+	setTimeout(b,2000);
+}
+setTimeout(a,3000);
+
+
+
+
+
+
+</script>
