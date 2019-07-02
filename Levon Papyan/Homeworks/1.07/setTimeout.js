@@ -1,24 +1,10 @@
-function first() {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        resolve('2000');
-      }, 2000);
-    });
-  }
+
   
-  function second() {
+  function thirds(i) {
     return new Promise(resolve => {
-      setTimeout(() => {
-        resolve('3000');
-      }, 3000);
-    });
-  }
-  
-  function thirds() {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        resolve('5000');
-      }, 5000);
+      setTimeout((i) => {
+        resolve(i);
+      }, i);
     });
   }
   
@@ -30,7 +16,7 @@ function first() {
     console.log(`${ c }`);
     console.log(`${ b }`)
     console.log(`${ a }`);
-    ;
+    
     
   }
   
