@@ -1,0 +1,12 @@
+<script>
+    function timeout(ms){
+        let result = new Promise(function(res, rej){
+        setTimeout(() => {
+            res(console.log(ms))
+        }, ms);
+    });
+    Promise.resolve().then(result)
+    }
+    timeout(5000)
+    timeout(3000)
+</script>
