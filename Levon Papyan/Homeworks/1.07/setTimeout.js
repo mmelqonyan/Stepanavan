@@ -1,38 +1,21 @@
-function first() {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        resolve('2000');
-      }, 2000);
-    });
-  }
-  
-  function second() {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        resolve('3000');
-      }, 3000);
-    });
-  }
-  
-  function thirds() {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        resolve('5000');
-      }, 5000);
-    });
-  }
-  
-  async function allSetTimeout() {
-    let a = await first();
-    let b = await second();
-    let c = await thirds();
-  
-    console.log(`${ c }`);
-    console.log(`${ b }`)
-    console.log(`${ a }`);
-    ;
-    
-  }
-  
-  allSetTimeout();
-  
+function doBreathingSpace(ms) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve(`Time is over in ${ms} milliseconds`);
+    }, ms);
+  });
+}
+
+async function allSetTimeout() {
+  let a = await doBreathingSpace(5000);
+  let b = await doBreathingSpace(3000);
+  let c = await doBreathingSpace(1000);
+
+  console.log(`${a}`);
+  console.log(`${b}`)
+  console.log(`${c}`);
+  ;
+
+}
+
+allSetTimeout();

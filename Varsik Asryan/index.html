@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+   
+
+<script>
+    
+    
+     function promise(ms){
+         return new Promise((resolve)=> {
+             setTimeout(() => {
+                 resolve();
+                console.log("es chem spasum");
+
+            },ms)
+         });
+     }
+    // const promise = p(5000);
+
+    function a(){
+       console.log("second");
+
+   };
+   
+   promise(5000).then(() => setTimeout(a,3000));
+    
+
+ 
+    
+    </script>
+    </body>
+
+</html>
