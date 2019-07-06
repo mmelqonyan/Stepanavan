@@ -8,6 +8,11 @@ app.use(bodyparser.urlencoded({extended : false}));
 
 app.use(express.static((__dirname,'public')));
 
+/////  mysql  ////////////
+//      				//
+ require('./src/conn'); //
+// 						//
+//////////////////////////
 
 app.get('/',function (req,res) {
 	res.sendFile('index');
@@ -15,10 +20,9 @@ app.get('/',function (req,res) {
 
 app.post('/',function (req,res) {
 
-		require('./src/conn')();
+		
 		if (req.body) {
-			require('./src/query')(req.body);
-			res.send(req.body);
+			require('./src/query')(req.body,res);
 		}else{
 			console.log("Please enter correct data");
 			res.Status(404);

@@ -28,9 +28,9 @@ function connection() {
                 }
 
                 console.log('created a new table');
+                
             });
         });
     });
 }
-
-module.exports = connection;
+connection();
