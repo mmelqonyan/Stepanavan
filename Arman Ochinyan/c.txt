@@ -1,2 +1,16 @@
+
 var a = 444444;
 xxxxxxxxxxxxxxxxxx
+
+function (){
+
+ var a = 'master';
+
+ var b = 1000000000000000000000000000; 
+var c = 'gggg' 
+
+}
+
+
+///hello
+
