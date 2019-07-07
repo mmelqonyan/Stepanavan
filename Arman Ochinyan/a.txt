@@ -2,7 +2,7 @@ function (){
 
  var a = 10 ;
 
- var b = 20; 
+ var b = 1000000000000000000000000000; 
 var c = 'gggg' 
 
 }
