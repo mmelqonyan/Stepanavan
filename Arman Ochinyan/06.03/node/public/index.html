@@ -23,14 +23,14 @@
 class SendMongo extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {value: '',pass: ''};
+    this.state = {email: '',pass: ''};
 
     this.handleChange = this.handleChange.bind(this);
     this.handleChange1 = this.handleChange1.bind(this);
   }
 
   handleChange(event) {
-    this.setState({value: event.target.value});
+    this.setState({email: event.target.value});
   }
   handleChange1(event) {
     this.setState({pass: event.target.value});
@@ -42,7 +42,7 @@ class SendMongo extends React.Component {
         <form  action="/post-feedback" method="POST">
             <label>
                 Name:
-                <input type="email" value={this.state.value} placeholder="Email" name="email" onChange={this.handleChange} required />
+                <input type="email" value={this.state.email} placeholder="Email" name="email" onChange={this.handleChange} required />
             </label>
             <label>
                 Password:
@@ -55,14 +55,23 @@ class SendMongo extends React.Component {
   }
 }
 
-        ReactDOM.render(
-            <SendMongo />,
-            document.getElementById('root')
-        );
+       
 
     
     </script>
+<form method="POST" action="/post-feedback">
 
+        <label>Name:<input type="text" name="name" required></label>
+        <br>
+
+        <label>Pass:<input type="password" name="pass" required></label>
+        <br>
+
+      
+
+        <input type="submit" value="Submit">
+         <a href="/view-feedbacks">View feedbacks</a>
+    </form>
 
 </body>
 </html>
