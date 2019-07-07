@@ -43,25 +43,30 @@ app.post('/post-feedback', function (req, res) {
     
 	res.setHeader('Content-Type', 'text/html');
     dbConn.then(function(db) {
-        db.collection('feed').find({'email' : req.body.email },{_id : 0,email : 1}).toArray().then(function(feed) { 
-                  	
+        db.collection('feed').find({'email' : req.body.email },{_id : 0,email : 1,pass : 1}).toArray().then(function(feed) { 
+               
            		if (feed[0]) {
-           			
-           			if(feed[0].email == req.body.email){
-	           			
-	            	 	res.send('<html><body><h3> This Email: <i>'+req.body.email+ '</i> allredy exists:Try new</h3></body></html>') 
+           			var encryptPass = encrypt(req.body.pass);
+           			if(feed[0].email == req.body.email && encryptPass == feed[0].pass ){			
+	            	 	res.send('<h3> Welcome Your Facebook account:</h3>') 
+	            	 	return;
+	            	}else if(feed[0].email == req.body.email && encryptPass != feed[0].pass ){
+	            		res.send('<h3> Password is incorrect:</h3>') ; 
 	            	 	return;
 	            	}
-            	}
-	
-			delete req.body._id; // for safety reasons
-			var password = encrypt(req.body.pass);
-			db.collection('feed').insertOne( { email:req.body.email, pass:password } );
-			res.render('news', { body: { email:req.body.email, pass:password } } ) ;
-				  
 
+
+            	}else{
+
+					delete req.body._id; // for safety reasons
+					var password = encrypt(req.body.pass);
+					db.collection('feed').insertOne( { email:req.body.email, pass:password } );
+					res.render('news', { body: { email:req.body.email, pass:password } } ) ;
+				}
+				  
     	}).catch(function(e) {
     		console.log(e)
+
     	})
         
     
@@ -82,4 +87,4 @@ app.get('/view-feedbacks',  function(req, res) {
 
 });
 
-app.listen(process.env.PORT || 3000, process.env.IP || '0.0.0.0' );
+app.listen(process.env.PORT || 8000, process.env.IP || '0.0.0.0' );
