@@ -5,7 +5,7 @@ yyyyyyyyyyyyyy
 
 function (){
 
- var a = 'master Arman ochinyan';
+ var a = 'master Arman ochinyan vonces';
 
  var b = 1000000000000000000000000000; 
 var c = 'gggg' 
