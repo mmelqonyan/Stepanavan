@@ -8,7 +8,7 @@ class HelloMessage extends React.Component {
 
     render() {
         return (
-            <div  >
+            <React.Fragment  >
 
                 <Imgs src={require('./img/acc.jpg')} />
                 <Imgs src={require('./img/bag.jpg')} />
@@ -19,11 +19,8 @@ class HelloMessage extends React.Component {
                 <Imgs src={require('./img/acc.jpg')} />
                 <Imgs src={require('./img/bag.jpg')} />
                 <Imgs src={require('./img/g.jpg')} />
-                <Imgs src={require('./img/kurt.jpg')} />
-                <Imgs src={require('./img/mshoes.jpg')} />
-                <Imgs src={require('./img/wshoes.jpg')} />
                 
-            </div>
+            </React.Fragment>
         );
     }
 }

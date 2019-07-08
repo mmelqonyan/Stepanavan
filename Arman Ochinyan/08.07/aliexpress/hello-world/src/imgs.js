@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 class Imgs extends React.Component {
   	
   	state={
@@ -11,16 +10,20 @@ class Imgs extends React.Component {
   	render() {
 
 	    return (
-	        <React.Fragment>
-
-	            <img src={this.props.src} alt="img" />
-	            <div>
-		            <input type="button" onClick={this.countAdd} value="Buy" />
-					<p>{this.state.counter}</p>
+	        <div>
+		        <div className="card col-md" style={{width:300+'px'}}>
+	                    <img src={this.props.src}  alt="Responsive image" />   
+	                    <div className="card-body">
+	                        <h4 className="card-title">Գոտի</h4>
+	                        <p className="card-text">Բնական կաշի</p>
+	                        <p className="card-text">Գինը   16000 դր․</p>
+	                        <a className="btn btn-primary" onClick={this.countAdd} >BUY</a>
+	                    	<p>{this.state.counter}</p>
+	                    </div>
 	            </div>
-	        </React.Fragment>
+	        </div>
 	    );
-	 }
+	}
 }
 
 export default Imgs;
