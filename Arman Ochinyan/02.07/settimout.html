@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script >
+		
+	function timeout(ind,ms) {
+		return new Promise(resolve => setTimeout(()=>{resolve(ind)}, ms));
+	}
+
+	async function dd() {
+
+		await timeout("start",1000).then((e)=>console.log(e))
+
+		for(let i = 0; i < 5; i++){
+
+			await timeout(i,1000).then((e)=>console.log(e))
+			
+
+		}
+		
+		await timeout("loop end",1000).then((e)=>console.log(e))
+		console.log("end")
+	}
+
+dd()
+
+	</script>
+
+</body>
+</html>
