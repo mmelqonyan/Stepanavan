@@ -11,7 +11,7 @@ const showImgs = () => {
 	}
 	return table;
 }
-
+//name= {arr[i].name} price= {arr[i].price} tesak = {arr[i].tesak}
 
 export default showImgs;
 

@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 export default class MyComponent extends React.Component {
 
   _destroy = (e) => {
-    // - Удаление компонента из DO
+    
     ReactDOM.unmountComponentAtNode(this.props.self);
   }
   
