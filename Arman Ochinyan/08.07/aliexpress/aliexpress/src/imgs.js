@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import changeimg from './changePicture';
 import arr from "./imagesTypeObj";
@@ -14,15 +13,15 @@ class Imgs extends React.Component {
 			del : true
 		}
   	}
- 
+  	
 	countAdd = () => this.setState(prew =>({ counter: prew.counter + 1 }));
 	change = () => {
 		let url = changeimg(arr,this.state.imgSrc);
-		(this.state.imgSrc === url ) 
+		(this.state.imgSrc === url.img ) 
 		?
-			this.setState(prew =>({ imgSrc: changeimg(arr), counter: 0}))
+			this.setState(prew =>({ imgSrc: changeimg(arr).img, counter: 0}))
 		:
-			this.setState(prew =>({ imgSrc: url, counter: 0}));	
+			this.setState(prew =>({ imgSrc: url.img, counter: 0}));	
 	}
 	_destroy = (e) => {
    
@@ -32,26 +31,29 @@ class Imgs extends React.Component {
    
 	    this.setState(prew =>({ del: true}));
 	}
+	
   	render() {
+
   		let { counter , imgSrc , del } = this.state;
 	    return (
-	        (del) ? <div>
-		        <div class="card col-md" style={{width:340+'px'}}>
+	    	<div id={this.props.id}>
+	        {del ? 
+		        <div className="card col-md" style={{width:340+'px'}}>
 	                <img src={imgSrc}  alt={`Baz taking a img `} />   
-	                <div class="card-body">
-	                    <h4 class="card-title">Գոտի</h4>
-	                    <p class="card-text">Բնական կաշի</p>
-	                    <p class="card-text">Գինը   16000 դր․</p>
-	                    <input type="button" class="btn btn-primary" onClick={this.countAdd} value="BUY" />
-	                    <input type="button" class="btn btn-primary" onClick={this.change}  value="Change Picture" />
-	                    <input type="button" class="btn btn-primary" onClick={this._destroy}  value="Delete" />
+	                <div className="card-body">
+	                    <h4 className="card-title">Գոտի</h4>
+	                    <p className="card-text">Բնական կաշի</p>
+	                    <p className="card-text">Գինը   16000 դր․</p>
+	                    <input type="button" className="btn btn-primary" onClick={this.countAdd} value="BUY" />
+	                    <input type="button" className="btn btn-primary" onClick={this.change}  value="Change Picture" />
+	                    <input type="button" className="btn btn-primary" onClick={this._destroy}  value="Delete" />
 	                    <p>{counter}</p>
 	                </div>
 	            </div>
+	        
+	        : <input type="button" className="card" style={{width:340+'px'}} onClick={this._add} value="add card"/> 
+	        }
 	        </div>
-	        : <input type="button" class="card" style={{width:340+'px'}} onClick={this._add} value="add card"/> 
-
-
 	    );
 	}
 }
