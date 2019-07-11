@@ -8,65 +8,17 @@
  var img8 = require('./img/bag.jpg');
  var img9 = require('./img/g.jpg');
 
- var Images = [img1,img2,img3,img4,img5,img6,img7,img8,img9];
-
-// var Images = [
-// 	 {
-// 		src : img1,
-// 		name : 'Գօտի',
-// 		price : '$1000',
-// 		tesak : "bnakan kashi"
-// 	},
-// 	 {
-// 		src : img2,
-// 		name : 'Գօտի',
-// 		price : '$1000',
-// 		tesak : "bnakan kashi"
-// 	},
-// 	 {
-// 		src : img3,
-// 		name : 'Գօտի',
-// 		price : '$1000',
-// 		tesak : "bnakan kashi"
-// 	},
-// 	 {
-// 		src : img4,
-// 		name : 'Գօտի',
-// 		price : '$1000',
-// 		tesak : "bnakan kashi"
-// 	},
-// 	 {
-// 		src : img5,
-// 		name : 'Գօտի',
-// 		price : '$1000',
-// 		tesak : "bnakan kashi"
-// 	},
-// 	 {
-// 		src : img6,
-// 		name : 'Գօտի',
-// 		price : '$1000',
-// 		tesak : "bnakan kashi"
-// 	},
-// 	 {
-// 		src : img7,
-// 		name : 'Գօտի',
-// 		price : '$1000',
-// 		tesak : "bnakan kashi"
-// 	},
-// 	 {
-// 		src : img8,
-// 		name : 'Գօտի',
-// 		price : '$1000',
-// 		tesak : "bnakan kashi"
-// 	},
-// 	 {
-// 		src : img9,
-// 		name : 'Գօտի',
-// 		price : '$1000',
-// 		tesak : "bnakan kashi"
-// 	}
-// ]
-
+ var Images = [
+ 				{img:img1,id:1},
+ 				{img:img2,id:2},
+ 				{img:img3,id:3},
+ 				{img:img4,id:4},
+ 				{img:img5,id:5},
+ 				{img:img6,id:6},
+ 				{img:img7,id:7},
+ 				{img:img8,id:8},
+ 				{img:img9,id:9}
+ ];
 
 export default Images ;
 
