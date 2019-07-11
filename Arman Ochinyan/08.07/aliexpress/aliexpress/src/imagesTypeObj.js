@@ -10,5 +10,63 @@
 
  var Images = [img1,img2,img3,img4,img5,img6,img7,img8,img9];
 
+// var Images = [
+// 	 {
+// 		src : img1,
+// 		name : 'Գօտի',
+// 		price : '$1000',
+// 		tesak : "bnakan kashi"
+// 	},
+// 	 {
+// 		src : img2,
+// 		name : 'Գօտի',
+// 		price : '$1000',
+// 		tesak : "bnakan kashi"
+// 	},
+// 	 {
+// 		src : img3,
+// 		name : 'Գօտի',
+// 		price : '$1000',
+// 		tesak : "bnakan kashi"
+// 	},
+// 	 {
+// 		src : img4,
+// 		name : 'Գօտի',
+// 		price : '$1000',
+// 		tesak : "bnakan kashi"
+// 	},
+// 	 {
+// 		src : img5,
+// 		name : 'Գօտի',
+// 		price : '$1000',
+// 		tesak : "bnakan kashi"
+// 	},
+// 	 {
+// 		src : img6,
+// 		name : 'Գօտի',
+// 		price : '$1000',
+// 		tesak : "bnakan kashi"
+// 	},
+// 	 {
+// 		src : img7,
+// 		name : 'Գօտի',
+// 		price : '$1000',
+// 		tesak : "bnakan kashi"
+// 	},
+// 	 {
+// 		src : img8,
+// 		name : 'Գօտի',
+// 		price : '$1000',
+// 		tesak : "bnakan kashi"
+// 	},
+// 	 {
+// 		src : img9,
+// 		name : 'Գօտի',
+// 		price : '$1000',
+// 		tesak : "bnakan kashi"
+// 	}
+// ]
+
+
 export default Images ;
 
