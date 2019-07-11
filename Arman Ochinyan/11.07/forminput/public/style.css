@@ -1,0 +1,14 @@
+body{
+	background-color: #C1C1C1
+}
+.div{
+	background-color: #DADBDB;
+	
+}
+
+p{
+	font-size: 30px;
+	color: red;
+	margin: auto;
+	display: inline-block;
+}
