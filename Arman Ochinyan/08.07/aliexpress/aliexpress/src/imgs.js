@@ -14,7 +14,7 @@ class Imgs extends React.Component {
  
 	countAdd = () => this.setState(prew =>({ counter: prew.counter + 1 }));
 	change = () => {
-		let url = changeimg(arr);
+		let url = changeimg(arr,this.state.imgSrc);
 		(this.state.imgSrc === url ) 
 		?
 			this.setState(prew =>({ imgSrc: changeimg(arr), counter: 0}))
@@ -22,9 +22,8 @@ class Imgs extends React.Component {
 			this.setState(prew =>({ imgSrc: url, counter: 0}));	
 	}
 
-
   	render() {
-  		let {counter , imgSrc } = this.state;
+  		let { counter , imgSrc } = this.state;
 	    return (
 	        <div>
 		        <div class="card col-md" style={{width:340+'px'}}>

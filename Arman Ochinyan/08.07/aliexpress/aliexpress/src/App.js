@@ -5,7 +5,7 @@ import Imgs from './imgs';
 import arr from "./imagesTypeObj";
 
 const showImgs = () => {
-	let table=[];
+	let table = [];
 	for (var i = 0; i < arr.length; i++) {
 		table.push(<Imgs src = {arr[i]} />);
 	}
