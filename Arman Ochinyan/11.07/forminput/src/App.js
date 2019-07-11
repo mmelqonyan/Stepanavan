@@ -19,7 +19,10 @@ class App extends React.Component{
     	
     	this.setState({login: '', password: '',name : '',show : false});
     }
-    
+    onSubmit = (e) =>{
+    	e.preventDefault();
+    	this.setState({show : true});
+    }
     render() {
 
     	let { name, login, password, show } = {...this.state};
@@ -28,16 +31,16 @@ class App extends React.Component{
 	    return (
 
 	    	
-	        <form>
+	        <form  onSubmit={this.onSubmit}>
 		        <p><label> Name: <input type="text" name="name" value={name}
-			                        onChange={this.onChangevalue} autoComplete="off" /></label></p>
+			                        onChange={this.onChangevalue} autoComplete="off" required/></label></p>
 		        <p><label> Login: <input type="text" name="login" value={login}
-		                         onChange={this.onChangevalue} autoComplete="off"/></label></p>
+		                         onChange={this.onChangevalue} autoComplete="off" required/></label></p>
 
 	            <p><label> Password: <input type="password" name="password" value={password}
-	                            onChange={this.onChangevalue} /></label></p>
-	            <p><label> <input type="button"  value="Show values"
-	                            onClick={this.show} /></label></p>  
+	                            onChange={this.onChangevalue} required/></label></p>
+	            <p><label> <input type="submit"  value="Show values"
+	                             /></label></p>  
 	            <p><label> <input type="button"  value="Hide"
 	                            onClick={this.hide} /></label></p>               
 	
