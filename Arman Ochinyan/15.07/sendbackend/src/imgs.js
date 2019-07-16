@@ -8,11 +8,9 @@ class Imgs extends React.Component {
 	  		tesak : this.props.tesak,
 	  		price : this.props.price
 	  	}
+	  	
 	}
-  	send = () => {
-  		document.getElementById('iid').value = JSON.stringify(this.state);
-  		document.forms[0].submit();
-  	}
+  	
 
   	render() {
   		
@@ -28,8 +26,11 @@ class Imgs extends React.Component {
 
 	                    <p className="card-text">Գինը {this.props.price} դր․</p>
 	                   
-	                    <input type="button" onClick = {this.send} value="BUY" />
-	                   
+	                    
+	                    <form method="POST" action='http://localhost:3001' >
+				            <input type="hidden" value={JSON.stringify(this.state)} name="data"	/>
+				            <input type="submit"  value="BUY" />
+				        </form>
 	                </div>
 	            </div>
 	        

@@ -1,7 +1,6 @@
 // Please write yourpassword in connection.js/ connection.password key
 //Please run node index.js in folder /sendbackend and run npm start another terminal
-//Please install node_modules folder from react project
- 
+
 var express = require('express');
 var bodyparser = require('body-parser');
 var path = require('path');
