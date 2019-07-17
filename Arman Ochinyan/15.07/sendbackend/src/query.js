@@ -1,7 +1,7 @@
 
 function query(req,res) {
 	var reqbody = JSON.parse(req);
-	console.log(reqbody)
+	
 	var connection = require("./connection")();
 	connection.connect();
 	var db = "products";
