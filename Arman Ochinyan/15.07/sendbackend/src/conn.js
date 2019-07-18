@@ -13,7 +13,7 @@ function connection() {
 
         console.log("Connected!");
            
-        connection.query("CREATE DATABASE if not exists products ", function (err, result) {
+        connection.query(`CREATE DATABASE if not exists ${db}`, function (err, result) {
             if (err) throw err;
             console.log("Database created");
 
