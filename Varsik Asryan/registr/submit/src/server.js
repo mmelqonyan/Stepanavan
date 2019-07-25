@@ -5,7 +5,7 @@ const mongo = new MongoClient("mongodb://localhost:27017/", { useNewUrlParser: t
 
 const app = express()
 app.use(bodyParser.urlencoded({extended:true}))
-app.post('/',function(req,res){
+app.post('/ ',function(req,res){
    mongo.connect(function(err, client){
 
        const db = client.db("varsik");27017
