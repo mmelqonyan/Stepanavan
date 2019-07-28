@@ -4,22 +4,38 @@ import './App.css';
 
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+  
+    state = {
       data: ''
     };
-  }
-  async componentDidMount() {
+  
+ componentDidMount() {
     window.addEventListener('load', this.get.bind(this))
   }
 load (){
   window.location.reload()
 }
-  async get(e) {
-    e.preventDefault();
+handleChange = event => {
+    this.setState({ name: event.target.value });
+  }
+
+  handleSubmit = event => {
+    event.preventDefault();
+
+    const user = {
+      data: this.state.title
+    };
+
+    axios.post(`http://localhost:3001`, { user })
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })
+  }
+
+  get() {
     var url = 'http://localhost:3001';
-    await axios.get(url)
+    axios.get(url)
       .then((ggg) => {
         this.setState({
           data: ggg.data.title,
@@ -33,11 +49,16 @@ load (){
 
       <div id="App">
 
-        <form action="http://localhost:3001/" method="POST">
-
-          <input type="text" name="title" />
-          <input type="submit" value="submit"  />
+        
+        
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            Person Name:
+            <input type="text" name="title" onChange={this.handleChange} />
+          </label>
+          <button type="submit">Add</button>
         </form>
+      
         <p>{this.state.data}</p>
 
       </div>
