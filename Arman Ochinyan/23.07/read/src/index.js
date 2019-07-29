@@ -4,7 +4,6 @@ import './index.css';
 
 import * as serviceWorker from './serviceWorker';
 
-
 class App extends React.PureComponent {
 		
 		constructor(props){
@@ -22,15 +21,15 @@ class App extends React.PureComponent {
 				.catch(e => console.log(e))   
 		
 		}
+		 
 		
 		handleSubmit = (event) => { 
-				
+			if (this.refs.name.value === "") {  event.preventDefault();return ;}
 			fetch('/name', {
 				method: 'POST',			
 				headers: {'Content-Type': 'application/x-www-form-urlencoded'},
 				body: this.refs.name.value
 			})
-
 			.then(function(response) {
 			    return response.text().then(function(text) {
 			        return text ? JSON.parse(text) : {}
@@ -45,7 +44,7 @@ class App extends React.PureComponent {
 		render(){
 			return (
 				<>
-					<p> Name { this.state.value}</p>
+					<p> Name { this.state.value } </p>
 					<form onSubmit={this.handleSubmit}>
 						<input type="text" ref="name" name="name" placeholder="Enter name" />
 						<input type="submit" value="Send backend" />
@@ -54,6 +53,7 @@ class App extends React.PureComponent {
 			)
 		}
 }
+
 
 
 

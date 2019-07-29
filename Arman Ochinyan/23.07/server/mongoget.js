@@ -4,7 +4,6 @@ var setValue = require('./mongo');
 
  function data(res) {
 		
-	
 	 MongoClient.connect(url,{ useNewUrlParser: true }, function(err, db) {
 	    if (err) {throw err};
 	        var dbo = db.db("mydb");
@@ -21,6 +20,5 @@ var setValue = require('./mongo');
 	});
 	 
 }
-
 
 module.exports = data;

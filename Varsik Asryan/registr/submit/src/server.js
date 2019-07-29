@@ -12,7 +12,7 @@ module.exports = {
 		MongoClient.connect(url, function(err, db) {
 		  	db.collection('user').insertOne( {
 				"name": name,
-                                 "surname":surname,
+                "surname":surname,
 				"email": email,
 				"password": password
 			},function(err, result){

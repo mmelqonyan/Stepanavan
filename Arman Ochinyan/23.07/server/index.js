@@ -1,12 +1,11 @@
-
-//Please run node index.js in folder /sendbackend, run mongodb-server and run npm start in another terminal
-
 var express = require('express');
 var bodyparser = require('body-parser');
 var getValue = require('./mongoget');
 var setValue = require('./mongo');
+const cors = require('cors')
 
 var app = express();
+app.use(cors())
 app.use(bodyparser.urlencoded({ extended : false }));
 
 app.get('/name',function (req,res) {
